@@ -16,6 +16,17 @@ body {
 }
 
 
+#blocker {
+  align-items: center;
+  background-color: white;
+  display: none;
+  font-family: "Rubik";
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+
 #banner {
   width: 67%;
 }
@@ -78,6 +89,13 @@ body {
       font-family: Arial;
       font-size: 0.8em;
     }
+  }
+}
+
+
+@media screen and (min-width: 426px) {
+  #blocker {
+    display: flex;
   }
 }
 

@@ -11,6 +11,17 @@ body {
 }
 
 
+#blocker {
+  align-items: center;
+  background-color: white;
+  display: none;
+  font-family: "Rubik";
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+
 header {
   display: flex;
   flex-direction: row;
@@ -147,5 +158,12 @@ main {
         }
       }
     }
+  }
+}
+
+
+@media screen and (min-width: 426px) {
+  #blocker {
+    display: flex;
   }
 }
