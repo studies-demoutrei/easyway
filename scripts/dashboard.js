@@ -1,7 +1,7 @@
 const containerTransactionsElement = document.querySelector("#container-transactions");
 const userBalanceElement = document.querySelector("#user-balance");
 const userFirstNameElement = document.querySelector("#user-firstName");
-const userData = await (await fetch('/db/mock.json')).json();
+const userData = await (await fetch('db/mock.json')).json();
 const userLastUpdatedElement = document.querySelector("#user-lastUpdated");
 
 
