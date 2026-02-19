@@ -2,7 +2,50 @@
 <html lang="en">
   <head>
     <link rel="icon" href="../assets/icon.png"/>
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EasyWay</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div id="blueBlob"></div>
+      <div id="container-greeting">Welcome back, <span id="user-firstName"></span></div>
+      <img id="icon" src="../assets/icon.png"/>
+    </header>
+    <main>
+      <section id="container-balance">
+        <div id="container-balance-title">Current Balance</div>
+        <div id="container-balance-bal">&#8369;<span id="user-balance"></span></div>
+        <div id="container-balance-lastUpdated">Last updated on <span id="user-lastUpdated"></span></div>
+      </section>
+      <section id="actions">
+        <div id="action-transfer" class="action">
+          <img class="action-icon"/>
+          <span class="action-name">Transfer</span>
+        </div>
+        <div id="action-deposit" class="action">
+          <img class="action-icon"/>
+          <span class="action-name">Deposit</span>
+        </div>
+        <div id="action-viewAll" class="action">
+          <img class="action-icon"/>
+          <span class="action-name">More</span>
+        </div>
+      </section>
+      <section id="transactions">
+        <div id="container-title">Transactions</div>
+        <div id="container-transactions"></div>
+      </section>
+    </main>
+    <script type="module" src="../scripts/dashboard.js"></script>
+    <script type="module" src="../scripts/userManager.js"></script>
+    <script type="module">
+      import { setupHook } from '../scripts/dashboard.js';
+
+      setupHook();
+    </script>
+  </body>
 </html>

@@ -19,7 +19,7 @@ function signIn() {
     warnInvalidEmail(true);
     return;
   }
-  if (validateCredentials(email, password)) window.open('/dashboard', "_self");
+  if (validateCredentials(email, password)) window.open('./dashboard', "_self");
 }
 
 

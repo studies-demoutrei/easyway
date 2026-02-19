@@ -1,0 +1,151 @@
+:root {
+  --signature-blue: #0a398e;
+  --signature-green: #039a47;
+}
+
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 1.25rem;
+
+  > #blueBlob {
+    aspect-ratio: 1 / 1;
+    background-image: linear-gradient(to top, #0a398e, 25%, #98b6ff, 90%, white);
+    border-radius: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -63%);
+    width: 150vw;
+    z-index: -1;
+  }
+
+  > #container-greeting {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "Rubik";
+    font-size: 1.25em;
+    font-weight: bold;
+    width: max-content;
+
+    > #user-firstName {
+      font-size: 1.25em;
+    }
+  }
+
+  > #icon {
+    aspect-ratio: 1 / 1;
+    height: max-content;
+    width: 4rem;
+  }
+}
+
+
+main {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  
+  > #container-balance {
+    align-self: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px lightgray;
+    font-family: "Rubik";
+    padding: 0.75rem 1.5rem;
+    width: 70%;
+    
+    > div {
+      background-image: linear-gradient(135deg, #039a47, #00b9a9);
+      background-clip: text;
+      color: transparent;
+
+      &#container-balance-bal {
+        font-size: 1.75em;
+        font-weight: bold;
+        margin: 0.7rem 0;
+      }
+
+      &#container-balance-lastUpdated {
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  > #actions {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+
+    > .action {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      
+      > .action-icon {
+        aspect-ratio: 1 / 1;
+        background-color: #057a3a;
+        border-radius: 50%;
+        width: 3rem;
+      }
+
+      > .action-name {
+        color: #057a3a;
+        font-family: Arial;
+      }
+    }
+  }
+
+  > #transactions {
+    align-self: center;
+    width: 80%;
+    
+    > #container-title {
+      color: #057a3a;
+      font-family: "Rubik";
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+
+    > #container-transactions {
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+      padding: 0.5rem 0;
+
+      > .transaction {
+        display: flex;
+        flex-direction: row;
+        font-family: "Rubik";
+        font-size: 0.9em;
+        justify-content: space-between;
+        padding: 0.25em 1rem;
+
+        > .transaction-name {
+          color: #0a398e;
+          font-weight: bold;
+        }
+
+        > .transaction-total {
+          color: #039a47;
+        }
+      }
+    }
+  }
+}

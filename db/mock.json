@@ -1,7 +1,18 @@
 {
-  "user_id": 0,
+  "_id": 0,
+  "balance": 20586.89,
   "credentials": {
     "email": "username@example.com",
     "pass": "password"
+  },
+  "lastUpdated": "02-16-26",
+  "name": {
+    "firstName": "John",
+    "surname": "Discord"
+  },
+  "transactions": {
+    "Salary": 30809.99,
+    "Grocery": 10000.00,
+    "Snack": 223.10
   }
 }
