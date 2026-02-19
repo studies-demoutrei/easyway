@@ -23,7 +23,9 @@ body {
   font-family: "Rubik";
   height: 100vh;
   justify-content: center;
+  position: absolute;
   width: 100vw;
+  z-index: 1;
 }
 
 
