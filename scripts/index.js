@@ -1,10 +1,8 @@
-import { fetchUser } from './userManager.js';
-
-
 const emailElement = document.querySelector("#form-signIn-email");
 const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
 const passwordElement = document.querySelector("#form-signIn-password");
 const signInButtonElement = document.querySelector("#form-signIn-button");
+const userData = await (await fetch('/db/mock.json')).json();
 
 window.signIn = signIn;
 window.warnInvalidEmail = warnInvalidEmail;
@@ -24,7 +22,6 @@ function signIn() {
 
 
 function validateCredentials(email, password) {
-  const userData = fetchUser();
   if ((email != userData["credentials"]["email"]) || (password != userData["credentials"]["pass"])) {
     warnIncorrectCredentials(true);
     return false;
