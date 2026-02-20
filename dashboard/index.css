@@ -29,12 +29,14 @@ header {
   padding-top: 1.25rem;
 
   > #blueBlob {
-    aspect-ratio: 1 / 1;
-    background-image: linear-gradient(to top, #0a398e, 25%, #98b6ff, 90%, white);
-    border-radius: 50%;
+    background-image: linear-gradient(to top, #0a398e, 45%, #98b6ff);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    height: 200px;
     left: 50%;
     position: absolute;
-    transform: translate(-50%, -63%);
+    top: 0;
+    transform: translateX(-50%);
     width: 150vw;
     z-index: -1;
   }
@@ -49,7 +51,7 @@ header {
     width: max-content;
 
     > #user-firstName {
-      font-size: 1.25em;
+      font-size: 1.5em;
     }
   }
 
