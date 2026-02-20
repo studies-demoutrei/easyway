@@ -95,6 +95,24 @@ body {
 }
 
 
+footer {
+  bottom: 0;
+  margin-bottom: 1rem;
+  position: absolute;
+
+  > #container-createAccount {
+    background-image: linear-gradient(135deg, #039a47, #00b9a9);
+    background-clip: text;
+    font-family: Arial;
+    font-size: 0.8em;
+
+    > span {
+      color: transparent;
+    }
+  }
+}
+
+
 @media screen and (min-width: 768px) {
   #blocker {
     display: flex;
