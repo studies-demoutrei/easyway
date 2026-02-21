@@ -1,16 +1,16 @@
 :root {
+  --primary: #f1f0eb;
   --signature-blue: #0a398e;
   --signature-green: #039a47;
 }
 
 
 body {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
+  background-color: var(--primary);
+  font-family: "Rubik";
   margin: 0;
+  overflow-x: clip;
+  overflow-y: auto;
   padding: 0;
   width: 100vw;
 }
@@ -21,94 +21,188 @@ body {
   background-color: white;
   display: none;
   font-family: "Rubik";
-  height: 100vh;
+  height: 100%;
   justify-content: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100vw;
   z-index: 1;
 }
 
 
-#banner {
-  width: 67%;
+header {
+  align-items: center;
+  background-color: #187bcd;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 45px;
+  justify-content: space-between;
+  padding: 0 0.75rem;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+
+  > #banner {
+    height: 67%;
+  }
+
+  > #navigationBar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: max-content;
+
+    > .navigationBar-item {
+      background-color: white;
+      border-radius: 15px;
+      font-size: 0.8em;
+      padding: 0.25rem 0.5rem;
+    }
+  }
 }
 
 
-#form-signIn {
+main {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
-  width: 100%;
+  justify-content: center;
 
-  > .form-signIn-container {
-    align-items: center;
+  > section {
+    background-color: white;
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
-    width: 60%;
-    
-    > .form-signIn-input {
-      border: 2px solid var(--signature-blue);
-      border-radius: 28px;
-      font-family: sans-serif;
-      padding: 0.5em 0.75em;
-      width: 100%;
-      
-      &::placeholder {
-        font-family: sans-serif;
-      }
-  
-      &:focus {
-        outline: none;
-      }
+    overflow: clip;
+    width: 250px;
+
+    &:first-child {
+      margin-top: 1rem;
     }
 
-    > .warning {
-      color: red;
-      font-family: Arial;
-      font-size: 0.7em;
-      font-weight: bold;
-      padding-left: 1.2em;
-      visibility: hidden;
+    &:last-child {
+      margin-bottom: 1rem;
     }
-  }
 
+    > .coverImage {
+      aspect-ratio: 4 / 2 ;
+    }
 
-  > #form-signIn-button {
-    background-image: linear-gradient(135deg, #039a47, #00b9a9);
-    border: none;
-    border-radius: 28px;
-    color: white;
-    font-family: Arial;
-    font-size: 1em;
-    padding: 0.25em 0.75em;
-    width: 45%;
-  }
-
-  > #form-forgotPassword {
-    > #form-forgotPassword-container {
-      color: #38b6ff;
-      font-family: Arial;
+    > .content {
+      display: flex;
+      flex-direction: column;
       font-size: 0.8em;
+      padding: 0.5rem 1rem;
+
+      > .title {
+        background-image: linear-gradient(135deg, #039A47, #00B9A9);
+        background-clip: text;
+        color: transparent;
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+    }
+
+    &#section-humanMadeIngenuity {
+      > .content {
+        gap: 0.5em;
+        text-align: center;
+
+        > #enumeration {
+          align-self: center;
+          display: flex;
+          flex-direction: row;
+          gap: 0.5em;
+
+          > .enumeration-item {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            
+            > .enumeration-count {
+              aspect-ratio: 1 / 1;
+              border-radius: 50%;
+              color: var(--signature-blue);
+              font-size: 1.1em;
+              font-weight: bold;
+              padding: 0.25em;
+              width: 1em;
+            }
+
+            > .enumeration-content {
+              font-size: 0.9em;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 
 footer {
-  bottom: 0;
-  margin-bottom: 1rem;
-  position: absolute;
+  align-items: center;
+  background-color: #e0e8f3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
 
-  > #container-createAccount {
-    background-image: linear-gradient(135deg, #039a47, #00b9a9);
-    background-clip: text;
-    font-family: Arial;
-    font-size: 0.8em;
+  > img {
+    width: 60%;
+  }
 
-    > span {
-      color: transparent;
+  > #contacts {
+    font-size: 0.75em;
+    width: 85%;
+
+    > .contacts-item {
+      > .contacts-item-name {
+        color: var(--signature-blue);
+      }
+
+      > .contacts-item-value {
+        background-clip: text;
+        background-image: linear-gradient(135deg, #039A47, #00B9A9);
+        color: transparent;
+      }
     }
+  }
+
+  > .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 85%;
+    
+    > .title {
+      color: var(--signature-blue);
+      font-weight: bold;
+    }
+    
+    > ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        color: var(--signature-green);
+        font-size: 0.85em;
+        margin-left: 1rem;
+        
+        > a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  > #copyright {
+    font-size: 0.7em;
   }
 }
 
@@ -116,21 +210,5 @@ footer {
 @media screen and (min-width: 768px) {
   #blocker {
     display: flex;
-  }
-}
-
-
-@media screen and (min-width: 600px) {
-  body {
-    flex-direction: row;
-    width: 100vw;
-
-    > #banner {
-      width: 35%;
-    }
-
-    > #form-signIn {
-      width: 50%;
-    }
   }
 }

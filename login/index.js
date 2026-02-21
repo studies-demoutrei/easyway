@@ -2,7 +2,7 @@ const emailElement = document.querySelector("#form-signIn-email");
 const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
 const passwordElement = document.querySelector("#form-signIn-password");
 const signInButtonElement = document.querySelector("#form-signIn-button");
-const userData = await (await fetch('db/mock.json')).json();
+const userData = await (await fetch('../db/mock.json')).json();
 
 window.signIn = signIn;
 window.warnInvalidEmail = warnInvalidEmail;

@@ -1,33 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="assets/icon.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>EasyWay</title>
   </head>
   <body>
     <div id="blocker"><span>This app is only available on mobile.</span></div>
-    <img id="banner" src="assets/banner.png"/>
-    <div id="form-signIn">
-      <div class="form-signIn-container">
-        <div id="warning-invalidEmail" class="warning">Invalid email</div>
-        <div id="warning-incorrectCredentials" class="warning">Incorrect email or password</div>
-        <input required type="email" name="email" id="form-signIn-email" placeholder="Email" class="form-signIn-input" autocomplete="email" oninput="warnInvalidEmail(false); warnIncorrectCredentials(false);"/>
-      </div>
-      <div class="form-signIn-container">
-        <input required type="password" name="password" id="form-signIn-password" placeholder="Password" class="form-signIn-input"/>
-      </div>
-      <button id="form-signIn-button" onclick="signIn();">Sign In</button>
-      <a id="form-forgotPassword">
-        <div id="form-forgotPassword-container">Forgot Password?</div>
-      </a>
-    </div>
+    <header>
+      <img id="banner" src="assets/banner.png">
+      <nav id="navigationBar">
+        <div id="navigationBar-signUp" class="navigationBar-item">Sign Up</div>
+        <div id="navigationBar-logIn" class="navigationBar-item">Log In</div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <img class="coverImage" src="assets/image1.png">
+        <div class="content">
+          <span class="title">BANKING MADE EASIER</span>
+          <span>Young adults and professionals alike favor online banking</span>
+        </div>
+      </section>
+      <section id="section-humanMadeIngenuity">
+        <div class="content">
+          <span class="title">HUMAN-MADE INGENUITY</span>
+          <span>Users have full control on their transactions, resulting in:</span>
+          <div id="enumeration">
+            <div class="enumeration-item">
+              <div class="enumeration-count">01</div>
+              <div class="enumeration-content">Enthusiasm for banking</div>
+            </div>
+            <div class="enumeration-item">
+              <div class="enumeration-count">02</div>
+              <div class="enumeration-content">Convenience in your hands</div>
+            </div>
+            <div class="enumeration-item">
+              <div class="enumeration-count">03</div>
+              <div class="enumeration-content">Hassle-free banking</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <img class="coverImage" src="assets/image2.png">
+        <div class="content">
+          <span class="title">COMPUTER FREEDOM</span>
+          <span>With high precision information retention and calculation, banking app system pertains repetitive transactions.</span>
+        </div>
+      </section>
+      <section>
+        <img class="coverImage" src="assets/image3.png">
+        <div class="content">
+          <span class="title">HUMAN &amp; COMPUTER SHORTCOMINGS</span>
+          <span>People make memory mistakes. The app tracks every transaction effortlessly. Fast and rule-based, it delivers precision, not moral judgment.</span>
+        </div>
+      </section>
+    </main>
     <footer>
-      <div id="container-createAccount">
-        Don't have an account? <span>Create one!</span>
+      <img src="assets/banner.png">
+      <div id="contacts">
+        <div class="contacts-item">
+          <span class="contacts-item-name">Metro Manila Hotline:</span>
+          <span class="contacts-item-value">&lpar;02&rpar; 8123-4567</span>
+        </div>
+        <div class="contacts-item">
+          <span class="contacts-item-name">Domestic Toll-Free &lpar;PLDT/GLOBE&rpar;:</span>
+          <span class="contacts-item-value">1-800-10-8123-4567</span>
+        </div>
+        <div class="contacts-item">
+          <span class="contacts-item-name">International Access:</span>
+          <span class="contacts-item-value">+63-2-8123-4567</span>
+        </div>
       </div>
+      <div id="pages-legal" class="list">
+        <span class="title">Legal</span>
+        <ul>
+          <li><a href="https://studies-demoutrei.github.io/easyway/tos">Terms and Conditions</a></li>
+        </ul>
+      </div>
+      <span id="copyright">Copyright © 2026 EasyWay. All Rights Reserved.</span>
     </footer>
-    <script type="module" src="scripts/index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../assets/icon.png"/>
+    <link rel="stylesheet" href="index.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EasyWay</title>
+  </head>
+  <body>
+    <div id="blocker"><span>This app is only available on mobile.</span></div>
+    <img id="banner" src="../assets/banner.png"/>
+    <div id="form-signIn">
+      <div class="form-signIn-container">
+        <div id="warning-invalidEmail" class="warning">Invalid email</div>
+        <div id="warning-incorrectCredentials" class="warning">Incorrect email or password</div>
+        <input required type="email" name="email" id="form-signIn-email" placeholder="Email" class="form-signIn-input" autocomplete="email" oninput="warnInvalidEmail(false); warnIncorrectCredentials(false);"/>
+      </div>
+      <div class="form-signIn-container">
+        <input required type="password" name="password" id="form-signIn-password" placeholder="Password" class="form-signIn-input"/>
+      </div>
+      <button id="form-signIn-button" onclick="signIn();">Sign In</button>
+      <a id="form-forgotPassword">
+        <div id="form-forgotPassword-container">Forgot Password?</div>
+      </a>
+    </div>
+    <footer>
+      <div id="container-createAccount">
+        Don't have an account? <span>Create one!</span>
+      </div>
+    </footer>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
