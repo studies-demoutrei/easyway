@@ -78,6 +78,7 @@ main {
     }
 
     &#stepOne {
+      height: 320px;
       position: relative;
       
       .stepOne-input {
@@ -186,7 +187,6 @@ main {
     }
 
     &#stepTwo {
-      display: flex;
       flex-direction: column;
       gap: 0.5rem;
       
@@ -244,7 +244,7 @@ main {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        margin-top: 0.75rem;
+        margin-top: 1rem;
         
         > #stepTwo-proofOfBillingUpload-display {
           align-items: center;

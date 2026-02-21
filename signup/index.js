@@ -155,7 +155,7 @@ function warn(warning, state) {
 }
 
 
-// stepOneEnumerationItem.classList.remove("active");
-// stepOneContainer.classList.remove("show");
-// stepTwoEnumerationItem.classList.add("active");
-// stepTwoContainer.classList.add("show");
+stepOneEnumerationItem.classList.remove("active");
+stepOneContainer.classList.remove("show");
+stepTwoEnumerationItem.classList.add("active");
+stepTwoContainer.classList.add("show");
