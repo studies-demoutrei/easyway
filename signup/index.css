@@ -1,0 +1,307 @@
+:root {
+  --gradient-0-blue: #00B9A9;
+  --gradient-0-green: #039a47;
+  --gradient-0: linear-gradient(135deg, var(--gradient-0-green), var(--gradient-0-blue));
+  --signature-blue: #0a398e;
+  --signature-green: #039a47;
+  --subtext-0: #B4B4B4;
+}
+
+
+body {
+  height: 100vh;
+  font-family: "Rubik";
+  margin: 0;
+  overflow: clip;
+  width: 100vw;
+}
+
+
+#blocker {
+  align-items: center;
+  background-color: white;
+  box-sizing: border-box;
+  display: none;
+  font-family: "Rubik";
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  > img {
+    width: 200px;
+  }
+}
+
+
+main {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  
+  > #steps-enumeration {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    > .steps-enumeration-item {
+      color: var(--signature-green);
+      font-weight: bold;
+      padding: 0.25rem 0.5rem;
+      transition: 0.3s linear;
+
+      &.active {
+        border-bottom: 2px solid var(--signature-green);
+      }
+    }
+  }
+
+  > .step {
+    display: none;
+    height: 315px;
+    justify-self: center;
+    overflow-x: clip;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+    width: 80%;
+
+    &.show {
+      display: block;
+    }
+
+    &#stepOne {
+      position: relative;
+      
+      .stepOne-input {
+        background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #039A47, #00B9A9) border-box;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        border: 1px solid transparent;
+        border-radius: 18px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+
+        > input {
+          border: none;
+          box-sizing: content-box;
+          margin: 0.25rem 0.5rem;
+          width: calc(100% - 1rem);
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        > #stepOne-userForm-password-toggle {
+          align-self: center;
+          border: none;
+          font-size: 0.8em;
+          position: absolute;
+          right: 10px;
+        }
+      }
+
+      > .stepOne-form {
+        display: none;
+        flex-direction: column;
+
+        &.view {
+          display: flex;
+        }
+
+        > .warning {
+          color: red;
+          display: none;
+          font-size: 0.7em;
+
+          &.show {
+            display: flex;
+          }
+        }
+      }
+
+      > .pagination {
+        position: absolute;
+        bottom: 33px;
+        width: 100%;
+
+        .paginationButton-back, .paginationButton-next {
+          border-radius: 9px;
+          font-size: 1.05em;
+          font-weight: bold;
+        }
+
+        .paginationButton-back {
+          border: 1px solid #039a47;
+          background-clip: text;
+          background-image: linear-gradient(135deg, #039a47, #00b9a9);
+          color: transparent;
+
+          &#stepOne-pagination-userForm-back {
+            width: 45%;
+          }
+        }
+        
+        .paginationButton-next {
+          background-image: linear-gradient(135deg, #039A47, #00B9A9);
+          border: none;
+          color: white;
+          font-size: 1.05em;
+          font-weight: bold;
+          padding: 0.5em 1em;
+          
+          &#stepOne-pagination-informationForm-next {
+            width: 100%;
+          }
+
+          &#stepOne-pagination-userForm-next {
+            width: 45%;
+          }
+        }
+
+        > div {
+          display: none;
+
+          &#stepOne-pagination-userForm {
+            flex-direction: row;
+            justify-content: space-evenly;
+          }
+
+          &.active {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &#stepTwo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      
+      > #stepTwo-validIdUpload {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+        > #stepTwo-validIdUpload-front, > #stepTwo-validIdUpload-back {
+          align-items: center;
+          aspect-ratio: 3 / 4;
+          background-image: linear-gradient(135deg, #039A47, #00B9A9);
+          background-clip: text;
+          border: 2px solid #039a47;
+          border-radius: 8px;
+          display: flex;
+          color: transparent;
+          justify-content: center;
+          width: 45%;
+        }
+
+        > #stepTwo-validIdUpload-button {
+          background-image: linear-gradient(135deg, #039A47, #00B9A9);
+          border: none;
+          border-radius: 15px;
+          color: white;
+          padding: 0.5rem;
+          margin-top: 0.75rem;
+          width: 95%;
+        }
+      }
+
+      > #container-acceptedDocuments {
+        font-size: 0.8em;
+        margin-top: 1rem;
+        
+        > .header {
+          color: #039a47;
+        }
+
+        > ul {
+          margin: 0;
+          margin-top: 0.25em;
+          padding: 0;
+          padding-left: 25px;
+
+          > li {
+            color: var(--signature-blue);
+          }
+        }
+      }
+
+      > #stepTwo-proofOfBillingUpload {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+        
+        > #stepTwo-proofOfBillingUpload-display {
+          align-items: center;
+          aspect-ratio: 5 / 2;
+          background-clip: text;
+          background-image: var(--gradient-0);
+          border: 2px solid var(--gradient-0-green);
+          border-radius: 15px;
+          box-sizing: border-box;
+          color: transparent;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          width: 100%;
+        }
+
+        > #stepTwo-proofOfBillingUpload-button {
+          background-image: var(--gradient-0);
+          border: none;
+          border-radius: 13px;
+          color: white;
+          padding: 0.5rem 0;
+        }
+
+        > .subtext {
+          color: var(--subtext-0);
+          font-size: 0.7em;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+footer {
+  bottom: 0;
+  margin-bottom: 1.5rem;
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+
+  > span {
+    font-size: 0.85em;
+    
+    > a {
+      background-clip: text;
+      background-image: var(--gradient-0);
+      color: transparent;
+      text-decoration: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  #blocker {
+    display: flex;
+  }
+}

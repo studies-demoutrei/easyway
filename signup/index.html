@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyWay</title>
+  </head>
+  <body>
+    <div id="blocker"><span>This app is only available on mobile.</span></div>
+    <header>
+      <img src="../assets/banner.png">
+    </header>
+    <main>
+      <div id="steps-enumeration">
+        <div id="steps-enumeration-stepOne" class="steps-enumeration-item active">Step 1</div>
+        <div id="steps-enumeration-stepTwo" class="steps-enumeration-item">Step 2</div>
+        <div id="steps-enumeration-stepThree" class="steps-enumeration-item">Step 3</div>
+      </div>
+      <section id="stepOne" class="step show">
+        <div id="stepOne-informationForm" class="stepOne-form view">
+          <div id="informationForm-fullLegalName-warning-requiredField" class="warning">This field is required</div>
+          <div id="informationForm-fullLegalName-warning-invalidLegalName" class="warning">Invalid legal name</div>
+          <div class="stepOne-input">
+            <input required id="stepOne-informationForm-fullLegalName" type="text" placeholder="Full Legal Name" name="fullLegalName">
+          </div>
+          <div id="informationForm-dateOfBirth-warning-requiredField" class="warning">This field is required</div>
+          <div class="stepOne-input">
+            <input required id="stepOne-informationForm-dateOfBirth" type="date" placeholder="Date of Birth" name="dateOfBirth">
+          </div>
+          <div id="informationForm-mobileNumber-warning-requiredField" class="warning">This field is required</div>
+          <div id="informationForm-mobileNumber-warning-invalidNumber" class="warning">Invalid mobile number</div>
+          <div class="stepOne-input">
+            <input required id="stepOne-informationForm-mobileNumber" type="number" placeholder="Mobile Number" name="mobileNumber">
+          </div>
+          <div id="informationForm-emailAddress-warning-requiredField" class="warning">This field is required</div>
+          <div id="informationForm-emailAddress-warning-invalidAddress" class="warning">Invalid e-mail address</div>
+          <div class="stepOne-input">
+            <input required id="stepOne-informationForm-emailAddress" type="email" placeholder="E-mail Address" name="email" autocomplete="email">
+          </div>
+        </div>
+        <div id="stepOne-userForm" class="stepOne-form">
+          <div id="userForm-username-warning-requiredField" class="warning">This field is required</div>
+          <div id="userForm-username-warning-invalidUsername" class="warning">Username must only contain alphanumeric and underscore characters</div>
+          <div class="stepOne-input">
+            <input required id="stepOne-userForm-username" type="text" placeholder="Username" name="username" autocomplete="username">
+          </div>
+          <div id="userForm-password-warning-requiredField" class="warning">This field is required</div>
+          <div id="userForm-password-warning-invalid" class="warning">Password must contain at least one upper- and lowercase characters, at least one digit, and minimum of 8 characters</div>
+          <div class="stepOne-input">
+            <input required id="stepOne-userForm-password" type="password" placeholder="Password" name="password">
+            <button id="stepOne-userForm-password-toggle">view</button>
+          </div>
+        </div>
+        <div id="stepOne-pagination" class="pagination">
+          <div id="stepOne-pagination-informationForm" class="active">
+            <button id="stepOne-pagination-informationForm-next" class="paginationButton-next">Next</button>
+          </div>
+          <div id="stepOne-pagination-userForm">
+            <button id="stepOne-pagination-userForm-back" class="paginationButton-back">Back</button>
+            <button id="stepOne-pagination-userForm-next" class="paginationButton-next">Next</button>
+          </div>
+        </div>
+      </section>
+      <section id="stepTwo" class="step">
+        <div id="stepTwo-validIdUpload">
+          <div id="stepTwo-validIdUpload-front"><span class="uploadText">FRONT</span></div>
+          <div id="stepTwo-validIdUpload-back"><span class="uploadText">BACK</span></div>
+          <button id="stepTwo-validIdUpload-button">Upload valid ID front and back</button>
+        </div>
+        <div id="container-acceptedDocuments">
+          <span class="header">Easyway accepts:</span>
+          <ul>
+            <li>Philippine Identification System &lpar;PhilID/ePhilID&rpar;</li>
+            <li>Philippine Passport</li>
+            <li>Driver's License &lpar;issued by LTO&rpar;</li>
+            <li>Unified Multi-purpose ID &lpar;UMID&rpar;</li>
+            <li>Social Security System &lpar;SSS&rpar; ID</li>
+            <li>Professional Regulation Commission &lpar;PRC&rpar; ID</li>
+            <li>Postal ID &lpar;Digitalized/Plastic&rpar;</li>
+            <li>Voter's ID / Voter's Certificate</li>
+          </ul>
+        </div>
+        <div id="stepTwo-proofOfBillingUpload">
+          <div id="stepTwo-proofOfBillingUpload-display"><span>PROOF OF BILLING</span></div>
+          <button id="stepTwo-proofOfBillingUpload-button">Upload proof of billing</button>
+          <span class="subtext">Recent utility bill, lease, etc.</span>
+        </div>
+      </section>
+      <!-- <section id="stepThree" class="step show"></section> -->
+    </main>
+    <footer>
+      <span>Have an account? <a href="../login">Log In</a></span>
+    </footer>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
