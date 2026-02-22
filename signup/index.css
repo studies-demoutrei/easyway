@@ -91,11 +91,7 @@ main {
         background-image: linear-gradient(135deg, #039a47, #00b9a9);
         color: transparent;
 
-        &#stepOne-pagination-userForm-back {
-          width: 49%;
-        }
-
-        &#stepTwo-pagination-back {
+        &#stepOne-pagination-userForm-back, &#stepTwo-pagination-back, &#stepThree-pagination-back {
           width: 49%;
         }
       }
@@ -112,11 +108,7 @@ main {
           width: 100%;
         }
 
-        &#stepOne-pagination-userForm-next {
-          width: 49%;
-        }
-
-        &#stepTwo-pagination-next {
+        &#stepOne-pagination-userForm-next, &#stepTwo-pagination-next, &#stepThree-pagination-iAgree {
           width: 49%;
         }
       }
@@ -304,19 +296,36 @@ main {
         }
       }
 
+      > #stepTwo-address-warning-invalidAddress, > #stepTwo-address-warning-requiredField {
+        color: red;
+        display: none;
+        font-size: 0.8em;
+        padding-left: 1em;
+        position: relative;
+        bottom: -1rem;
+
+        &.show {
+          display: block;
+        }
+      }
+
       > #stepTwo-address-container {
         background-clip: content-box, border-box;
         background-image: linear-gradient(white, white), var(--gradient-0);
         border: 2px solid transparent;
         border-radius: 18px;
-        overflow: clip;
         margin-top: 1rem;
+        overflow: clip;
         
         > #stepTwo-address-input {
           border: none;
           box-sizing: border-box;
           padding: 0.35rem 0.75rem;
           width: 100%;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
@@ -347,6 +356,63 @@ main {
           border-radius: 7px;
           color: white;
           padding: 0.5rem 0.75rem;
+        }
+      }
+    }
+
+    &#stepThree {
+      flex-direction: column;
+      font-size: 0.8em;
+
+      > #stepThree-title {
+        color: var(--gradient-0-green);
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      > #stepThree-terms {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-top: 0.25rem;
+
+        > .term {
+          color: var(--signature-blue);
+          display: flex;
+          flex-direction: column;
+
+          > .heading {
+            font-weight: bold;
+          }
+          
+          > .content {
+            font-size: 0.95em;
+            padding-left: 1em;
+          }
+        }
+      }
+
+      > #stepThree-caution-container {
+        font-size: 0.9em;
+        margin-top: 0.25rem;
+        
+        > .caution {
+          color: red;
+          font-weight: bold;
+        }
+
+        > #stepThree-caution-emailUnlock-container {
+          color: var(--signature-blue);
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          margin-top: 0.45rem;
+
+          > .contact {
+            > .value {
+              color: var(--signature-green);
+            }
+          }
         }
       }
     }

@@ -4,6 +4,7 @@ const stepThreeEnumerationItem = document.querySelector("#steps-enumeration-step
 
 const stepOneContainer = document.querySelector("#stepOne");
 const stepTwoContainer = document.querySelector("#stepTwo");
+const stepThreeContainer = document.querySelector("#stepThree");
 
 const stepOneInformationFormContainer = document.querySelector("#stepOne-informationForm");
 const stepOneUserFormContainer = document.querySelector("#stepOne-userForm");
@@ -22,6 +23,7 @@ const emailAddressInput = document.querySelector("#stepOne-informationForm-email
 const usernameInput = document.querySelector("#stepOne-userForm-username");
 const passwordInput = document.querySelector("#stepOne-userForm-password");
 const passwordToggleButton = document.querySelector("#stepOne-userForm-password-toggle");
+const addressInput = document.querySelector("#stepTwo-address-input");
 
 const fullLegalNameRequiredFieldWarning = document.querySelector("#informationForm-fullLegalName-warning-requiredField");
 const fullLegalNameInvalidLegalNameWarning = document.querySelector("#informationForm-fullLegalName-warning-invalidLegalName");
@@ -34,16 +36,22 @@ const usernameRequiredFieldWarning = document.querySelector("#userForm-username-
 const usernameInvalidUsernameWarning = document.querySelector("#userForm-username-warning-invalidUsername");
 const passwordRequiredFieldWarning = document.querySelector("#userForm-password-warning-requiredField");
 const passwordInvalidWarning = document.querySelector("#userForm-password-warning-invalid");
+const addressRequiredFieldWarning = document.querySelector("#stepTwo-address-warning-requiredField");
+const addressInvalidAddressWarning = document.querySelector("#stepTwo-address-warning-invalidAddress");
 
 const stepTwoPaginationContainer = document.querySelector("#stepTwo-pagination-container");
 const stepTwoPaginationBackButton = document.querySelector("#stepTwo-pagination-back");
 const stepTwoPaginationNextButton = document.querySelector("#stepTwo-pagination-next");
 
+const stepThreePaginationContainer = document.querySelector("#stepThree-pagination-container");
+const stepThreePaginationBackButton = document.querySelector("#stepThree-pagination-back");
+const stepThreePaginationIAgreeButton = document.querySelector("#stepThree-pagination-iAgree");
+
 const fullLegalNameRegex = /^[\p{L}\s'-]+$/u;
 const emailAddressRegex = /^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/m;
 const mobileNumberRegex = /^[1-9]{1}[0-9]{7,14}$/;
 const usernameRegex = /^[a-zA-Z0-9_]{3,16}$/;
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})$/;
 
 
 fullLegalNameInput.addEventListener("input", (_) => {
@@ -72,6 +80,11 @@ passwordInput.addEventListener("input", (_) => {
   warn(passwordRequiredFieldWarning, false);
   warn(passwordInvalidWarning, false);
 })
+
+addressInput.addEventListener("input", (_) => {
+  warn(addressRequiredFieldWarning, false);
+})
+
 
 stepOnePaginationInformationFormNextButton.addEventListener("click", (_) => {
   if (!fullLegalNameInput.value) {
@@ -107,6 +120,7 @@ stepOnePaginationInformationFormNextButton.addEventListener("click", (_) => {
   stepOneUserFormContainer.classList.add("view");
   stepOnePaginationInformationFormContainer.classList.remove("active");
   stepOnePaginationUserFormContainer.classList.add("active");
+  window.scrollTo(0, 0);
 })
 
 stepOnePaginationUserFormBackButton.addEventListener("click", (_) => {
@@ -114,6 +128,7 @@ stepOnePaginationUserFormBackButton.addEventListener("click", (_) => {
   stepOneUserFormContainer.classList.remove("view");
   stepOnePaginationInformationFormContainer.classList.add("active");
   stepOnePaginationUserFormContainer.classList.remove("active");
+  window.scrollTo(0, 0);
 })
 
 stepOnePaginationUserFormNextButton.addEventListener("click", (_) => {
@@ -138,6 +153,7 @@ stepOnePaginationUserFormNextButton.addEventListener("click", (_) => {
   stepTwoEnumerationItem.classList.add("active");
   stepTwoContainer.classList.add("show");
   stepTwoPaginationContainer.classList.add("active");
+  window.scrollTo(0, 0);
 })
 
 passwordToggleButton.addEventListener("click", (_) => {
@@ -161,6 +177,37 @@ stepTwoPaginationBackButton.addEventListener("click", (_) => {
   stepOnePaginationInformationFormContainer.classList.remove("active");
   stepOneUserFormContainer.classList.add("view");
   stepOnePaginationUserFormContainer.classList.add("active");
+  window.scrollTo(0, 0);
+})
+
+stepTwoPaginationNextButton.addEventListener("click", (_) => {
+  if (!addressInput.value) {
+    warn(addressRequiredFieldWarning, true);
+    return;
+  }
+  
+  stepTwoEnumerationItem.classList.remove("active");
+  stepTwoContainer.classList.remove("show");
+  stepTwoPaginationContainer.classList.remove("active");
+  stepThreeEnumerationItem.classList.add("active");
+  stepThreeContainer.classList.add("show");
+  stepThreePaginationContainer.classList.add("active");
+  window.scrollTo(0, 0);
+})
+
+
+stepThreePaginationBackButton.addEventListener("click", (_) => {
+  stepThreeEnumerationItem.classList.remove("active");
+  stepThreePaginationContainer.classList.remove("active");
+  stepThreeContainer.classList.remove("show");
+  stepTwoEnumerationItem.classList.add("active");
+  stepTwoContainer.classList.add("show");
+  stepTwoPaginationContainer.classList.add("active");
+  window.scrollTo(0, 0);
+})
+
+stepThreePaginationIAgreeButton.addEventListener("click", (_) => {
+  window.open('../login', "_self");
 })
 
 
@@ -173,8 +220,15 @@ function warn(warning, state) {
 }
 
 
-// stepOneEnumerationItem.classList.remove("active");
-// stepOneContainer.classList.remove("show");
-// stepTwoEnumerationItem.classList.add("active");
-// stepTwoContainer.classList.add("show");
-// stepTwoPaginationContainer.classList.add("active");
+stepOneEnumerationItem.classList.remove("active");
+stepOneContainer.classList.remove("show");
+stepTwoEnumerationItem.classList.add("active");
+stepTwoContainer.classList.add("show");
+stepTwoPaginationContainer.classList.add("active");
+
+// stepTwoEnumerationItem.classList.remove("active");
+// stepTwoContainer.classList.remove("show");
+// stepTwoPaginationContainer.classList.remove("active");
+// stepThreeEnumerationItem.classList.add("active");
+// stepThreeContainer.classList.add("show");
+// stepThreePaginationContainer.classList.add("active");

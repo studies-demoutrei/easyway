@@ -94,6 +94,8 @@
           <div id="stepTwo-signatureUpload-display" class="signatureCanvas"><span>Signature 2</span></div>
           <div id="stepTwo-signatureUpload-display" class="signatureCanvas"><span>Signature 3</span></div>
         </div>
+        <div id="stepTwo-address-warning-requiredField">This is a required field</div>
+        <div id="stepTwo-address-warning-invalidAddress">Invalid address</div>
         <div id="stepTwo-address-container">
           <input required id="stepTwo-address-input" type="text" placeholder="Full address">
         </div>
@@ -108,7 +110,73 @@
           </div>
         </div>
       </section>
-      <!-- <section id="stepThree" class="step show"></section> -->
+      <section id="stepThree" class="step">
+        <span id="stepThree-title">Easyway Bank Terms and Conditions</span>
+        <div id="stepThree-terms">
+          <div class="term">
+            <span class="heading">1. Acceptance of Terms</span>
+            <span class="content">By registering and using Easyway Bank's mobile banking services, you agree to be bound by these Terms &amp; Conditions, as well as applicable laws, regulations, and Bangko Sentral ng Pilipinas &lpar;BSP&rpar; guidelines.</span>
+          </div>
+          <div class="term">
+            <span class="heading">2. Definitions</span>
+            <span class="content">"Bank" refers to Easyway Bank. "You," and "User" refers to the registered customer using the mobile banking app. "Services" include account access, transfers, bill payments, deposits, and other features provided via the app.</span>
+          </div>
+          <div class="term">
+            <span class="heading">3. Account Registration &amp; Verification</span>
+            <span class="content">You must provide accurate personal information, valid ID, proof of billing, signature specimens, and a selfie for verification. The Bank reserves the right to reject or suspend accounts if information is incomplete, fraudulent, or unverifiable. Accoutns are subject to Know-Your-Customer &lpar;KYC&rpar; and Anti-Money Laundering &lpar;AML&rpar; requirements.</span>
+          </div>
+          <div class="term">
+            <span class="heading">4. Security &amp; Responsibility</span>
+            <span class="content">You are responsible for safeguarding your login credentials, mobile device, and personal information. The Bank will provide secure systems, but you must use secure internet connectiosn and avoid sharing your credentials. Any transaction made using your credentials will be deemed authorized by you.</span>
+          </div>
+          <div class="term">
+            <span class="heading">5. Services &amp; Limitations</span>
+            <span class="content">The Bank may set transaction limits, fees, or restrictions for security and regulatory compliance. Certain services may be unavailable during system maintenance or due to regulatory requirements. The Bank reserves the right to update, suspend, or terminate services at any time with prior notice.</span>
+          </div>
+          <div class="term">
+            <span class="heading">6. Liability</span>
+            <span class="content">The Bank is not liable for losses due to user negligence, unauthorized access caused by credential sharing, or third-party system failures. The Bank will only be liable for proven errors directly attributable to its sytems.</span>
+          </div>
+          <div class="term">
+            <span class="heading">7. Data Privacy</span>
+            <span class="content">Your personal data will be collected, stored, and processed in accordance with the Data Privacy Act of 2012 &lpar;RA 10173&rpar;. Data may be shared with regulators or third-party service providers strictly for compliance and service delivery.</span>
+          </div>
+          <div class="term">
+            <span class="heading">8. Amendments</span>
+            <span class="content">The Bank may amend these Terms &amp; Conditions at any time. Updates will be communicated via the app or official channels. Continued use of the app after changes constitutes acceptance of the revised terms.</span>
+          </div>
+          <div class="term">
+            <span class="heading">9. Governing Law</span>
+            <span class="content">These Terms &amp; Conditions are governed by the laws of the Republic of the Philippines and the regulations of the Bangko Sentral ng Pilipinas &lpar;BSP&rpar;</span>
+          </div>
+        </div>
+        <div id="stepThree-caution-container">
+          <span class="caution">You will be notified via e-mail for the approval and confirmation of your account within 72 business hours. If not approved, your account will be locked.</span>
+          <div id="stepThree-caution-emailUnlock-container">
+            <span>Email communications will be available in unlocking your account or call:</span>
+            <div class="contact">
+              <span class="name">Metro Manila Hotline:</span>
+              <span class="value">&lpar;20&rpar; 8123-4567</span>
+            </div>
+            <div class="contact">
+              <span class="name">Domestic Toll-Free &lpar;PLDT/Globe&rpar;:</span>
+              <span class="value">1-800-10-8123-4567</span>
+            </div>
+            <div class="contact">
+              <span class="contact">
+                <span class="name">International Access:</span>
+                <span class="value">+63-2-8123-4567</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="stepThree-pagination" class="pagination">
+          <div id="stepThree-pagination-container" class="pagination-container">
+            <button id="stepThree-pagination-back" class="paginationButton-back">Back</button>
+            <button id="stepThree-pagination-iAgree" class="paginationButton-next">I Agree</button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <span>Have an account? <a href="../login">Log In</a></span>
