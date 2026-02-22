@@ -9,10 +9,11 @@
 
 
 body {
-  height: 100vh;
+  box-sizing: border-box;
   font-family: "Rubik";
   margin: 0;
-  overflow: clip;
+  overflow-x: clip;
+  overflow-y: auto;
   width: 100vw;
 }
 
@@ -66,19 +67,78 @@ main {
 
   > .step {
     display: none;
-    height: 315px;
     justify-self: center;
-    overflow-x: clip;
-    overflow-y: auto;
     padding: 0.5rem 0;
     width: 80%;
 
     &.show {
       display: block;
     }
+    
+    > .pagination {
+      margin-top: 1rem;
+      width: 100%;
+
+      .paginationButton-back, .paginationButton-next {
+        border-radius: 9px;
+        font-size: 1.05em;
+        font-weight: bold;
+      }
+
+      .paginationButton-back {
+        border: 1px solid #039a47;
+        background-clip: text;
+        background-image: linear-gradient(135deg, #039a47, #00b9a9);
+        color: transparent;
+
+        &#stepOne-pagination-userForm-back {
+          width: 49%;
+        }
+
+        &#stepTwo-pagination-back {
+          width: 49%;
+        }
+      }
+      
+      .paginationButton-next {
+        background-image: linear-gradient(135deg, #039A47, #00B9A9);
+        border: none;
+        color: white;
+        font-size: 1.05em;
+        font-weight: bold;
+        padding: 0.5em 1em;
+        
+        &#stepOne-pagination-informationForm-next {
+          width: 100%;
+        }
+
+        &#stepOne-pagination-userForm-next {
+          width: 49%;
+        }
+
+        &#stepTwo-pagination-next {
+          width: 49%;
+        }
+      }
+
+      > .pagination-container {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &#stepOne-pagination-userForm {
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+
+        &.active {
+          display: flex;
+        }
+      }
+    }
 
     &#stepOne {
-      height: 320px;
+      height: 330px;
       position: relative;
       
       .stepOne-input {
@@ -132,58 +192,6 @@ main {
         }
       }
 
-      > .pagination {
-        position: absolute;
-        bottom: 33px;
-        width: 100%;
-
-        .paginationButton-back, .paginationButton-next {
-          border-radius: 9px;
-          font-size: 1.05em;
-          font-weight: bold;
-        }
-
-        .paginationButton-back {
-          border: 1px solid #039a47;
-          background-clip: text;
-          background-image: linear-gradient(135deg, #039a47, #00b9a9);
-          color: transparent;
-
-          &#stepOne-pagination-userForm-back {
-            width: 45%;
-          }
-        }
-        
-        .paginationButton-next {
-          background-image: linear-gradient(135deg, #039A47, #00B9A9);
-          border: none;
-          color: white;
-          font-size: 1.05em;
-          font-weight: bold;
-          padding: 0.5em 1em;
-          
-          &#stepOne-pagination-informationForm-next {
-            width: 100%;
-          }
-
-          &#stepOne-pagination-userForm-next {
-            width: 45%;
-          }
-        }
-
-        > div {
-          display: none;
-
-          &#stepOne-pagination-userForm {
-            flex-direction: row;
-            justify-content: space-evenly;
-          }
-
-          &.active {
-            display: flex;
-          }
-        }
-      }
     }
 
     &#stepTwo {
@@ -212,7 +220,7 @@ main {
         > #stepTwo-validIdUpload-button {
           background-image: linear-gradient(135deg, #039A47, #00B9A9);
           border: none;
-          border-radius: 15px;
+          border-radius: 7px;
           color: white;
           padding: 0.5rem;
           margin-top: 0.75rem;
@@ -264,7 +272,7 @@ main {
         > #stepTwo-proofOfBillingUpload-button {
           background-image: var(--gradient-0);
           border: none;
-          border-radius: 13px;
+          border-radius: 7px;
           color: white;
           padding: 0.5rem 0;
         }
@@ -275,16 +283,85 @@ main {
           padding-left: 10px;
         }
       }
+
+      > #stepTwo-signatureUpload {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        
+        > .signatureCanvas {
+          align-items: center;
+          aspect-ratio: 3 / 1;
+          border: 2px solid var(--gradient-0-green);
+          border-radius: 15px;
+          color: var(--subtext-0);
+          display: flex;
+          flex-direction: row;
+          font-size: 0.8em;
+          justify-content: left;
+          padding-left: 1em;
+        }
+      }
+
+      > #stepTwo-address-container {
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white), var(--gradient-0);
+        border: 2px solid transparent;
+        border-radius: 18px;
+        overflow: clip;
+        margin-top: 1rem;
+        
+        > #stepTwo-address-input {
+          border: none;
+          box-sizing: border-box;
+          padding: 0.35rem 0.75rem;
+          width: 100%;
+        }
+      }
+
+      > #stepTwo-selfie-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+
+        > #stepTwo-selfie-display {
+          align-items: center;
+          aspect-ratio: 2 / 1;
+          background-clip: text;
+          background-image: var(--gradient-0);
+          border: 2px solid var(--gradient-0-green);
+          border-radius: 13px;
+          color: transparent;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          position: relative;
+          width: 100%;
+        }
+
+        > #stepTwo-selfie-button {
+          background-image: var(--gradient-0);
+          border: none;
+          border-radius: 7px;
+          color: white;
+          padding: 0.5rem 0.75rem;
+        }
+      }
     }
   }
 }
 
 
 footer {
-  bottom: 0;
-  margin-bottom: 1.5rem;
-  position: absolute;
-  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  justify-content: center;
+  position: relative;
   width: 100vw;
 
   > span {

@@ -35,6 +35,10 @@ const usernameInvalidUsernameWarning = document.querySelector("#userForm-usernam
 const passwordRequiredFieldWarning = document.querySelector("#userForm-password-warning-requiredField");
 const passwordInvalidWarning = document.querySelector("#userForm-password-warning-invalid");
 
+const stepTwoPaginationContainer = document.querySelector("#stepTwo-pagination-container");
+const stepTwoPaginationBackButton = document.querySelector("#stepTwo-pagination-back");
+const stepTwoPaginationNextButton = document.querySelector("#stepTwo-pagination-next");
+
 const fullLegalNameRegex = /^[\p{L}\s'-]+$/u;
 const emailAddressRegex = /^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/m;
 const mobileNumberRegex = /^[1-9]{1}[0-9]{7,14}$/;
@@ -133,6 +137,7 @@ stepOnePaginationUserFormNextButton.addEventListener("click", (_) => {
   stepOneContainer.classList.remove("show");
   stepTwoEnumerationItem.classList.add("active");
   stepTwoContainer.classList.add("show");
+  stepTwoPaginationContainer.classList.add("active");
 })
 
 passwordToggleButton.addEventListener("click", (_) => {
@@ -146,6 +151,19 @@ passwordToggleButton.addEventListener("click", (_) => {
 })
 
 
+stepTwoPaginationBackButton.addEventListener("click", (_) => {
+  stepTwoEnumerationItem.classList.remove("active");
+  stepTwoContainer.classList.remove("show");
+  stepTwoPaginationContainer.classList.remove("active");
+  stepOneContainer.classList.add("show");
+  stepOneEnumerationItem.classList.add("active");
+  stepOneInformationFormContainer.classList.remove("view");
+  stepOnePaginationInformationFormContainer.classList.remove("active");
+  stepOneUserFormContainer.classList.add("view");
+  stepOnePaginationUserFormContainer.classList.add("active");
+})
+
+
 function warn(warning, state) {
   if (state) {
     warning.classList.add("show");
@@ -155,7 +173,8 @@ function warn(warning, state) {
 }
 
 
-stepOneEnumerationItem.classList.remove("active");
-stepOneContainer.classList.remove("show");
-stepTwoEnumerationItem.classList.add("active");
-stepTwoContainer.classList.add("show");
+// stepOneEnumerationItem.classList.remove("active");
+// stepOneContainer.classList.remove("show");
+// stepTwoEnumerationItem.classList.add("active");
+// stepTwoContainer.classList.add("show");
+// stepTwoPaginationContainer.classList.add("active");
