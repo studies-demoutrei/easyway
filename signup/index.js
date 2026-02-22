@@ -249,18 +249,3 @@ function warn(warning, state) {
     warning.classList.remove("show");
   }
 }
-
-
-stepOneEnumerationItem.classList.remove("active");
-stepOneContainer.classList.remove("show");
-stepTwoEnumerationItem.classList.add("active");
-stepTwoContainer.classList.add("show");
-stepTwoPaginationContainer.classList.add("active");
-stepTwoMainSection.classList.add("show");
-
-// stepTwoEnumerationItem.classList.remove("active");
-// stepTwoContainer.classList.remove("show");
-// stepTwoPaginationContainer.classList.remove("active");
-// stepThreeEnumerationItem.classList.add("active");
-// stepThreeContainer.classList.add("show");
-// stepThreePaginationContainer.classList.add("active");

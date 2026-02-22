@@ -86,8 +86,11 @@ body {
   }
 
   > #form-forgotPassword {
+    color: #38b6ff;
+    text-decoration: none;
+    
     > #form-forgotPassword-container {
-      color: #38b6ff;
+      color: inherit;
       font-family: Arial;
       font-size: 0.8em;
     }
@@ -108,6 +111,11 @@ footer {
 
     > span {
       color: transparent;
+
+      > a {
+        color: inherit;
+        text-decoration: none;
+      }
     }
   }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Easyway</title>
+  </head>
+  <body>
+    <div id="blocker"><span>This app is only available on mobile.</span></div>
+    <header>
+      <img src="../assets/banner.png">
+    </header>
+    <main>
+      <section id="changePassword-section" class="show">
+        <span class="section-title">Change password</span>
+        <div id="changePassword-form">
+          <input required id="changePassword-form-email-input" type="email" name="email" autocomplete="email" placeholder="Email">
+          <input required id="changePassword-form-newPassword-input" type="password" name="password" placeholder="New Password">
+        </div>
+        <div id="changePassword-pagination" class="pagination-container">
+          <button id="changePassword-pagination-change" class="paginationButton next">Change</button>
+          <button id="changePassword-pagination-back" class="paginationButton back">Back</button>
+        </div>
+      </section>
+      <section id="authentication-section">
+        <span class="section-title">Authenticate</span>
+        <span class="section-subtext">A 6-digit code was sent to 0917-XXX-X678</span>
+        <input required id="authentication-code-input" type="text">
+        <div id="authentication-pagination" class="pagination-container">
+          <button id="authentication-pagination-verify" class="paginationButton next">Verify</button>
+          <button id="authentication-pagination-back" class="paginationButton back">Back</button>
+        </div>
+        <span id="subtext-didNotReceiveCode" class="section-subtext">Did not receive code? <span id="authentication-resendCode">Resend</span>
+      </section>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
