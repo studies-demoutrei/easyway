@@ -91,6 +91,11 @@ main {
         background-image: linear-gradient(135deg, #039a47, #00b9a9);
         color: transparent;
 
+        &#stepTwo-selfieCapture-pagination-back {
+          padding: 0.5em 1em;
+          width: 100%;
+        }
+        
         &#stepOne-pagination-userForm-back, &#stepTwo-pagination-back, &#stepThree-pagination-back {
           width: 49%;
         }
@@ -189,173 +194,229 @@ main {
     &#stepTwo {
       flex-direction: column;
       gap: 0.5rem;
-      
-      > #stepTwo-validIdUpload {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        
-        > #stepTwo-validIdUpload-front, > #stepTwo-validIdUpload-back {
-          align-items: center;
-          aspect-ratio: 3 / 4;
-          background-image: linear-gradient(135deg, #039A47, #00B9A9);
-          background-clip: text;
-          border: 2px solid #039a47;
-          border-radius: 8px;
-          display: flex;
-          color: transparent;
-          justify-content: center;
-          width: 45%;
-        }
 
-        > #stepTwo-validIdUpload-button {
-          background-image: linear-gradient(135deg, #039A47, #00B9A9);
-          border: none;
-          border-radius: 7px;
-          color: white;
-          padding: 0.5rem;
-          margin-top: 0.75rem;
-          width: 95%;
-        }
-      }
-
-      > #container-acceptedDocuments {
-        font-size: 0.8em;
-        margin-top: 1rem;
-        
-        > .header {
-          color: #039a47;
-        }
-
-        > ul {
-          margin: 0;
-          margin-top: 0.25em;
-          padding: 0;
-          padding-left: 25px;
-
-          > li {
-            color: var(--signature-blue);
-          }
-        }
-      }
-
-      > #stepTwo-proofOfBillingUpload {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        
-        > #stepTwo-proofOfBillingUpload-display {
-          align-items: center;
-          aspect-ratio: 5 / 2;
-          background-clip: text;
-          background-image: var(--gradient-0);
-          border: 2px solid var(--gradient-0-green);
-          border-radius: 15px;
-          box-sizing: border-box;
-          color: transparent;
-          display: flex;
-          justify-content: center;
-          position: relative;
-          width: 100%;
-        }
-
-        > #stepTwo-proofOfBillingUpload-button {
-          background-image: var(--gradient-0);
-          border: none;
-          border-radius: 7px;
-          color: white;
-          padding: 0.5rem 0;
-        }
-
-        > .subtext {
-          color: var(--subtext-0);
-          font-size: 0.7em;
-          padding-left: 10px;
-        }
-      }
-
-      > #stepTwo-signatureUpload {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 1rem;
-        
-        > .signatureCanvas {
-          align-items: center;
-          aspect-ratio: 3 / 1;
-          border: 2px solid var(--gradient-0-green);
-          border-radius: 15px;
-          color: var(--subtext-0);
-          display: flex;
-          flex-direction: row;
-          font-size: 0.8em;
-          justify-content: left;
-          padding-left: 1em;
-        }
-      }
-
-      > #stepTwo-address-warning-invalidAddress, > #stepTwo-address-warning-requiredField {
-        color: red;
+      > .section {
         display: none;
-        font-size: 0.8em;
-        padding-left: 1em;
-        position: relative;
-        bottom: -1rem;
-
+        
         &.show {
           display: block;
         }
       }
 
-      > #stepTwo-address-container {
-        background-clip: content-box, border-box;
-        background-image: linear-gradient(white, white), var(--gradient-0);
-        border: 2px solid transparent;
-        border-radius: 18px;
-        margin-top: 1rem;
-        overflow: clip;
-        
-        > #stepTwo-address-input {
-          border: none;
-          box-sizing: border-box;
-          padding: 0.35rem 0.75rem;
-          width: 100%;
+      > #stepTwo-section-main {
+        > #stepTwo-validIdUpload {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          
+          > #stepTwo-validIdUpload-front, > #stepTwo-validIdUpload-back {
+            align-items: center;
+            aspect-ratio: 3 / 4;
+            background-image: linear-gradient(135deg, #039A47, #00B9A9);
+            background-clip: text;
+            border: 2px solid #039a47;
+            border-radius: 8px;
+            display: flex;
+            color: transparent;
+            justify-content: center;
+            width: 45%;
+          }
 
-          &:focus {
-            outline: none;
+          > #stepTwo-validIdUpload-button {
+            background-image: linear-gradient(135deg, #039A47, #00B9A9);
+            border: none;
+            border-radius: 7px;
+            color: white;
+            padding: 0.5rem;
+            margin-top: 0.75rem;
+            width: 95%;
+          }
+        }
+
+        > #container-acceptedDocuments {
+          font-size: 0.8em;
+          margin-top: 1rem;
+          
+          > .header {
+            color: #039a47;
+          }
+
+          > ul {
+            margin: 0;
+            margin-top: 0.25em;
+            padding: 0;
+            padding-left: 25px;
+
+            > li {
+              color: var(--signature-blue);
+            }
+          }
+        }
+
+        > #stepTwo-proofOfBillingUpload {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-top: 1rem;
+          
+          > #stepTwo-proofOfBillingUpload-display {
+            align-items: center;
+            aspect-ratio: 5 / 2;
+            background-clip: text;
+            background-image: var(--gradient-0);
+            border: 2px solid var(--gradient-0-green);
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: transparent;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+          }
+
+          > #stepTwo-proofOfBillingUpload-button {
+            background-image: var(--gradient-0);
+            border: none;
+            border-radius: 7px;
+            color: white;
+            padding: 0.5rem 0;
+          }
+
+          > .subtext {
+            color: var(--subtext-0);
+            font-size: 0.7em;
+            padding-left: 10px;
+          }
+        }
+
+        > #stepTwo-signatureUpload {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          margin-top: 1rem;
+          
+          > .signatureCanvas {
+            align-items: center;
+            aspect-ratio: 3 / 1;
+            border: 2px solid var(--gradient-0-green);
+            border-radius: 15px;
+            color: var(--subtext-0);
+            display: flex;
+            flex-direction: row;
+            font-size: 0.8em;
+            justify-content: left;
+            padding-left: 1em;
+          }
+        }
+
+        > #stepTwo-address-warning-invalidAddress, > #stepTwo-address-warning-requiredField {
+          color: red;
+          display: none;
+          font-size: 0.8em;
+          padding-left: 1em;
+          position: relative;
+          bottom: -1rem;
+
+          &.show {
+            display: block;
+          }
+        }
+
+        > #stepTwo-address-container {
+          background-clip: content-box, border-box;
+          background-image: linear-gradient(white, white), var(--gradient-0);
+          border: 2px solid transparent;
+          border-radius: 18px;
+          margin-top: 1rem;
+          overflow: clip;
+          
+          > #stepTwo-address-input {
+            border: none;
+            box-sizing: border-box;
+            padding: 0.35rem 0.75rem;
+            width: 100%;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        > #stepTwo-selfie-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-top: 1rem;
+
+          > #stepTwo-selfie-display {
+            align-items: center;
+            aspect-ratio: 2 / 1;
+            background-clip: text;
+            background-image: var(--gradient-0);
+            border: 2px solid var(--gradient-0-green);
+            border-radius: 13px;
+            color: transparent;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+          }
+
+          > #stepTwo-selfie-button {
+            background-image: var(--gradient-0);
+            border: none;
+            border-radius: 7px;
+            color: white;
+            padding: 0.5rem 0.75rem;
           }
         }
       }
 
-      > #stepTwo-selfie-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-
-        > #stepTwo-selfie-display {
+      > #stepTwo-section-selfieCapture {
+        height: 280px;
+        
+        > #stepTwo-selfieCapture-selfie-display {
           align-items: center;
-          aspect-ratio: 2 / 1;
+          aspect-ratio: 16 / 9;
           background-clip: text;
           background-image: var(--gradient-0);
           border: 2px solid var(--gradient-0-green);
-          border-radius: 13px;
+          border-radius: 7px;
           color: transparent;
           display: flex;
           flex-direction: row;
           justify-content: center;
-          position: relative;
-          width: 100%;
         }
 
-        > #stepTwo-selfie-button {
+        > #stepTwo-selfieCapture-actions-container {
+          background-clip: text;
           background-image: var(--gradient-0);
-          border: none;
-          border-radius: 7px;
-          color: white;
-          padding: 0.5rem 0.75rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin-top: 0.75rem;
+
+          > #stepTwo-selfieCapture-actions-recapture, > #stepTwo-selfieCapture-actions-confirm {
+            border-radius: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            width: 45%;
+          }
+          
+          > #stepTwo-selfieCapture-actions-recapture {
+            background: none;
+            border: 2px solid var(--gradient-0-green);
+            color: transparent;
+          }
+
+          > #stepTwo-selfieCapture-actions-confirm {
+            background-image: var(--gradient-0);
+            border: none;
+            color: white;
+          }
         }
       }
     }

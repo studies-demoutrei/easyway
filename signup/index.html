@@ -66,47 +66,61 @@
         </div>
       </section>
       <section id="stepTwo" class="step">
-        <div id="stepTwo-validIdUpload">
-          <div id="stepTwo-validIdUpload-front"><span class="uploadText">FRONT</span></div>
-          <div id="stepTwo-validIdUpload-back"><span class="uploadText">BACK</span></div>
-          <button id="stepTwo-validIdUpload-button">Upload valid ID front and back</button>
+        <div id="stepTwo-section-main" class="section">
+          <div id="stepTwo-validIdUpload">
+            <div id="stepTwo-validIdUpload-front"><span class="uploadText">FRONT</span></div>
+            <div id="stepTwo-validIdUpload-back"><span class="uploadText">BACK</span></div>
+            <button id="stepTwo-validIdUpload-button">Upload valid ID front and back</button>
+          </div>
+          <div id="container-acceptedDocuments">
+            <span class="header">Easyway accepts:</span>
+            <ul>
+              <li>Philippine Identification System &lpar;PhilID/ePhilID&rpar;</li>
+              <li>Philippine Passport</li>
+              <li>Driver's License &lpar;issued by LTO&rpar;</li>
+              <li>Unified Multi-purpose ID &lpar;UMID&rpar;</li>
+              <li>Social Security System &lpar;SSS&rpar; ID</li>
+              <li>Professional Regulation Commission &lpar;PRC&rpar; ID</li>
+              <li>Postal ID &lpar;Digitalized/Plastic&rpar;</li>
+              <li>Voter's ID / Voter's Certificate</li>
+            </ul>
+          </div>
+          <div id="stepTwo-proofOfBillingUpload">
+            <div id="stepTwo-proofOfBillingUpload-display"><span>PROOF OF BILLING</span></div>
+            <button id="stepTwo-proofOfBillingUpload-button">Upload proof of billing</button>
+            <span class="subtext">Recent utility bill, lease, etc.</span>
+          </div>
+          <div id="stepTwo-signatureUpload">
+            <div id="stepTwo-signatureUpload-display" class="signatureCanvas"><span>Signature 1</span></div>
+            <div id="stepTwo-signatureUpload-display" class="signatureCanvas"><span>Signature 2</span></div>
+            <div id="stepTwo-signatureUpload-display" class="signatureCanvas"><span>Signature 3</span></div>
+          </div>
+          <div id="stepTwo-address-warning-requiredField">This is a required field</div>
+          <div id="stepTwo-address-warning-invalidAddress">Invalid address</div>
+          <div id="stepTwo-address-container">
+            <input required id="stepTwo-address-input" type="text" placeholder="Full address">
+          </div>
+          <div id="stepTwo-selfie-container">
+            <div id="stepTwo-selfie-display"><span>SELFIE</span></div>
+            <button id="stepTwo-selfie-button">Start selfie capture</button>
+          </div>
         </div>
-        <div id="container-acceptedDocuments">
-          <span class="header">Easyway accepts:</span>
-          <ul>
-            <li>Philippine Identification System &lpar;PhilID/ePhilID&rpar;</li>
-            <li>Philippine Passport</li>
-            <li>Driver's License &lpar;issued by LTO&rpar;</li>
-            <li>Unified Multi-purpose ID &lpar;UMID&rpar;</li>
-            <li>Social Security System &lpar;SSS&rpar; ID</li>
-            <li>Professional Regulation Commission &lpar;PRC&rpar; ID</li>
-            <li>Postal ID &lpar;Digitalized/Plastic&rpar;</li>
-            <li>Voter's ID / Voter's Certificate</li>
-          </ul>
-        </div>
-        <div id="stepTwo-proofOfBillingUpload">
-          <div id="stepTwo-proofOfBillingUpload-display"><span>PROOF OF BILLING</span></div>
-          <button id="stepTwo-proofOfBillingUpload-button">Upload proof of billing</button>
-          <span class="subtext">Recent utility bill, lease, etc.</span>
-        </div>
-        <div id="stepTwo-signatureUpload">
-          <div id="stepTwo-signatureUpload-display" class="signatureCanvas"><span>Signature 1</span></div>
-          <div id="stepTwo-signatureUpload-display" class="signatureCanvas"><span>Signature 2</span></div>
-          <div id="stepTwo-signatureUpload-display" class="signatureCanvas"><span>Signature 3</span></div>
-        </div>
-        <div id="stepTwo-address-warning-requiredField">This is a required field</div>
-        <div id="stepTwo-address-warning-invalidAddress">Invalid address</div>
-        <div id="stepTwo-address-container">
-          <input required id="stepTwo-address-input" type="text" placeholder="Full address">
-        </div>
-        <div id="stepTwo-selfie-container">
-          <div id="stepTwo-selfie-display"><span>SELFIE</span></div>
-          <button id="stepTwo-selfie-button">Start selfie capture</button>
+        <div id="stepTwo-section-selfieCapture" class="section">
+          <div id="stepTwo-selfieCapture-selfie-display">
+            <span>SELFIE CAPTURE</span>
+          </div>
+          <div id="stepTwo-selfieCapture-actions-container">
+            <button id="stepTwo-selfieCapture-actions-recapture">Recapture</button>
+            <button id="stepTwo-selfieCapture-actions-confirm">Confirm</button>
+          </div>
         </div>
         <div id="stepTwo-pagination" class="pagination">
-          <div id="stepTwo-pagination-container" class="pagination-container">
+          <div id="stepTwo-pagination-main-container" class="pagination-container">
             <button id="stepTwo-pagination-back" class="paginationButton-back">Back</button>
             <button id="stepTwo-pagination-next" class="paginationButton-next">Next</button>
+          </div>
+          <div id="stepTwo-pagination-selfieCapture-container" class="pagination-container">
+            <button id="stepTwo-selfieCapture-pagination-back" class="paginationButton-back">Back</button>
           </div>
         </div>
       </section>

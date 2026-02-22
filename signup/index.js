@@ -16,6 +16,13 @@ const stepOnePaginationUserFormContainer = document.querySelector("#stepOne-pagi
 const stepOnePaginationUserFormBackButton = stepOnePaginationUserFormContainer.querySelector("#stepOne-pagination-userForm-back");
 const stepOnePaginationUserFormNextButton = stepOnePaginationUserFormContainer.querySelector("#stepOne-pagination-userForm-next");
 
+const stepTwoMainSection = document.querySelector("#stepTwo-section-main");
+const stepTwoSelfieCaptureSection = document.querySelector("#stepTwo-section-selfieCapture");
+const stepTwoSelfieButton = document.querySelector("#stepTwo-selfie-button");
+const stepTwoSelfieCapturePagination = document.querySelector("#stepTwo-pagination-selfieCapture-container");
+const stepTwoSelfieCapturePaginationBackButton = stepTwoSelfieCapturePagination.querySelector("#stepTwo-selfieCapture-pagination-back");
+const stepTwoSelfieCaptureActionConfirmButton = document.querySelector("#stepTwo-selfieCapture-actions-confirm");
+
 const fullLegalNameInput = document.querySelector("#stepOne-informationForm-fullLegalName");
 const dateOfBirthInput = document.querySelector("#stepOne-informationForm-dateOfBirth");
 const mobileNumberInput = document.querySelector("#stepOne-informationForm-mobileNumber");
@@ -39,7 +46,7 @@ const passwordInvalidWarning = document.querySelector("#userForm-password-warnin
 const addressRequiredFieldWarning = document.querySelector("#stepTwo-address-warning-requiredField");
 const addressInvalidAddressWarning = document.querySelector("#stepTwo-address-warning-invalidAddress");
 
-const stepTwoPaginationContainer = document.querySelector("#stepTwo-pagination-container");
+const stepTwoPaginationContainer = document.querySelector("#stepTwo-pagination-main-container");
 const stepTwoPaginationBackButton = document.querySelector("#stepTwo-pagination-back");
 const stepTwoPaginationNextButton = document.querySelector("#stepTwo-pagination-next");
 
@@ -153,6 +160,7 @@ stepOnePaginationUserFormNextButton.addEventListener("click", (_) => {
   stepTwoEnumerationItem.classList.add("active");
   stepTwoContainer.classList.add("show");
   stepTwoPaginationContainer.classList.add("active");
+  stepTwoMainSection.classList.add("show");
   window.scrollTo(0, 0);
 })
 
@@ -203,11 +211,34 @@ stepThreePaginationBackButton.addEventListener("click", (_) => {
   stepTwoEnumerationItem.classList.add("active");
   stepTwoContainer.classList.add("show");
   stepTwoPaginationContainer.classList.add("active");
+  stepTwoMainSection.classList.add("show");
   window.scrollTo(0, 0);
 })
 
 stepThreePaginationIAgreeButton.addEventListener("click", (_) => {
   window.open('../login', "_self");
+})
+
+
+stepTwoSelfieButton.addEventListener("click", (_) => {
+  stepTwoMainSection.classList.remove("show");
+  stepTwoPaginationContainer.classList.remove("active");
+  stepTwoSelfieCaptureSection.classList.add("show");
+  stepTwoSelfieCapturePagination.classList.add("active");
+})
+
+stepTwoSelfieCapturePaginationBackButton.addEventListener("click", (_) => {
+  stepTwoSelfieCapturePagination.classList.remove("active");
+  stepTwoSelfieCaptureSection.classList.remove("show");
+  stepTwoMainSection.classList.add("show");
+  stepTwoPaginationContainer.classList.add("active");
+})
+
+stepTwoSelfieCaptureActionConfirmButton.addEventListener("click", (_) => {
+  stepTwoSelfieCapturePagination.classList.remove("active");
+  stepTwoSelfieCaptureSection.classList.remove("show");
+  stepTwoMainSection.classList.add("show");
+  stepTwoPaginationContainer.classList.add("active");
 })
 
 
@@ -225,6 +256,7 @@ stepOneContainer.classList.remove("show");
 stepTwoEnumerationItem.classList.add("active");
 stepTwoContainer.classList.add("show");
 stepTwoPaginationContainer.classList.add("active");
+stepTwoMainSection.classList.add("show");
 
 // stepTwoEnumerationItem.classList.remove("active");
 // stepTwoContainer.classList.remove("show");
