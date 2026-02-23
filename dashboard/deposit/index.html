@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="../assets/icon.png"/>
-    <link rel="stylesheet" href="index.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="../../assets/icon.png">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyWay</title>
   </head>
   <body>
@@ -26,23 +26,17 @@
       </section>
     </header>
     <main>
-      <section id="actions">
-        <div id="action-transfer" class="action">
-          <img class="action-icon"/>
-          <span class="action-name">Transfer</span>
+      <section id="fundSource-section">
+        <span class="section-heading">Select Fund Source</span>
+        <span class="section-subtext">My accounts</span>
+        <div id="fundSource-eWallet-container">
+          <span>My eWallet</span>
+          <span id="fundSource-eWallet-balance">&#8369; <span id="fundSource-eWallet-balance-amount"></span></span>
         </div>
-        <div id="action-deposit" class="action">
-          <img class="action-icon"/>
-          <span class="action-name">Deposit</span>
-        </div>
-        <div id="action-viewAll" class="action">
-          <img class="action-icon"/>
-          <span class="action-name">More</span>
-        </div>
-      </section>
-      <section id="transactions">
-        <div id="container-title">Transactions</div>
-        <div id="container-transactions"></div>
+        <span class="section-subtext">Other banks</span>
+        <select id="fundSource-externalBank-select" name="externalBank">
+          <option value="" disabled selected hidden>Select a bank</option>
+        </select>
       </section>
     </main>
     <script type="module" src="index.js"></script>

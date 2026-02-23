@@ -4,6 +4,23 @@ const userFirstNameElement = document.querySelector("#user-firstName");
 const userData = await (await fetch('../db/mock.json')).json();
 const userLastUpdatedElement = document.querySelector("#user-lastUpdated");
 
+const depositActionButton = document.querySelector("#action-deposit");
+const transferActionButton = document.querySelector("#action-transfer");
+const viewAllActionButton = document.querySelector("#action-viewAll");
+
+
+depositActionButton.addEventListener("click", (_) => {
+  window.open('./deposit', "_self");
+})
+
+transferActionButton.addEventListener("click", (_) => {
+  window.open('./transfer', "_self");
+})
+
+viewAllActionButton.addEventListener("click", (_) => {
+  window.open('./actions', "_self");
+})
+
 
 function Transaction(name, total) {
   const element = document.createElement("div");

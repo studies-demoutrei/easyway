@@ -83,6 +83,10 @@ body {
     font-size: 1em;
     padding: 0.25em 0.75em;
     width: 45%;
+    
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   > #form-forgotPassword {

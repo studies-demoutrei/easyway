@@ -86,6 +86,10 @@ main {
         font-weight: bold;
         padding: 0.5rem 1rem;
 
+        &:hover {
+          cursor: pointer;
+        }
+
         &.back {
           border: 2px solid var(--gradient-0-green);
           background-clip: text;
@@ -133,6 +137,10 @@ main {
           background-clip: text;
           background-image: var(--gradient-0);
           color: transparent;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }

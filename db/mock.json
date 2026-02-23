@@ -5,14 +5,17 @@
     "email": "username@example.com",
     "pass": "password"
   },
+  "eWallet": {
+    "balance": 500.00
+  },
   "lastUpdated": "02-16-26",
   "name": {
     "firstName": "John",
     "surname": "Discord"
   },
   "transactions": {
-    "Salary": 30809.99,
-    "Grocery": 10000.00,
-    "Snack": 223.10
+    "4345 ELINK TRANSFER": 9275.03,
+    "InstaPay": 900,
+    "ATM Withdrawal - @BPI MABUHAY": 6000
   }
 }

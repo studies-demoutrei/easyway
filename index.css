@@ -1,4 +1,7 @@
 :root {
+  --gradient-0-blue: #00B9A9;
+  --gradient-0-green: #039a47;
+  --gradient-0: linear-gradient(135deg, var(--gradient-0-green), var(--gradient-0-blue));
   --primary: #f1f0eb;
   --signature-blue: #0a398e;
   --signature-green: #039a47;
@@ -58,6 +61,13 @@ header {
       border-radius: 15px;
       font-size: 0.8em;
       padding: 0.25rem 0.5rem;
+      transition: 0.3s linear;
+
+      &:hover {
+        background-image: var(--gradient-0);
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 }

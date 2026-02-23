@@ -58,7 +58,7 @@ const fullLegalNameRegex = /^[\p{L}\s'-]+$/u;
 const emailAddressRegex = /^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/m;
 const mobileNumberRegex = /^[1-9]{1}[0-9]{7,14}$/;
 const usernameRegex = /^[a-zA-Z0-9_]{3,16}$/;
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})/;
 
 
 fullLegalNameInput.addEventListener("input", (_) => {
