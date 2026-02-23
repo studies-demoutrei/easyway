@@ -5,8 +5,9 @@
     "email": "username@example.com",
     "pass": "password"
   },
-  "eWallet": {
-    "balance": 500.00
+  "externalBanks": {
+    "eWallet": 500.00,
+    "GCash": 1420.59
   },
   "lastUpdated": "02-16-26",
   "name": {

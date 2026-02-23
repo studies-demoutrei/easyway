@@ -2,6 +2,7 @@
   --gradient-0-blue: #00B9A9;
   --gradient-0-green: #039a47;
   --gradient-0: linear-gradient(135deg, var(--gradient-0-green), var(--gradient-0-blue));
+  --primary: #f1f0eb;
   --signature-blue: #0a398e;
   --signature-green: #039a47;
   --subtext-0: #B4B4B4;
@@ -11,9 +12,13 @@
 
 body {
   background-color: var(--primary);
+  box-sizing: border-box;
   font-family: "Rubik";
+  height: 100vh;
   margin: 0;
+  overflow: clip;
   padding: 0;
+  width: 100vw;
 }
 
 
@@ -114,18 +119,201 @@ main {
   margin-top: 2rem;
 
   > section {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 80%;
 
+    &.show {
+      display: flex;
+    }
+
     > .section-heading {
       color: var(--signature-green);
-      font-size: 1.5em;
+      font-size: 1.35em;
       font-weight: bold;
     }
 
     > .section-subtext {
       color: var(--subtext-1);
+      font-size: 0.8em;
+    }
+
+    &#fundSource-section {
+      > .section-subtext {
+        margin-top: 0.75rem;
+      }
+      
+      > #fundSource-eWallet-container {
+        align-items: center;
+        aspect-ratio: 4 / 1;
+        background-image: var(--gradient-0);
+        border-radius: 15px;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.25em;
+        font-weight: bold;
+        justify-content: space-between;
+        padding: 0 1em;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      > #fundSource-externalBank-select {
+        border-radius: 10px;
+        padding: 0.5rem 0.75rem;
+        
+        &:focus {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom-width: 0;
+          outline: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        > .fundSource-externalBank-option {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &#depositAmount-section {
+      > .section-heading {
+        margin-bottom: 1rem;
+      }
+      
+      > .depositAmount-warning {
+        color: red;
+        display: none;
+        font-size: 0.8em;
+
+        &.show {
+          display: initial;
+        }
+      }
+      
+      > #depositAmount-input {
+        border: 2px solid var(--gradient-0-green);
+        border-radius: 7px;
+        font-size: 1.25em;
+        padding: 0.45em 0.75em;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    &#depositTransaction-section {
+      > #receipt-container {
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+        margin-top: 0.75rem;
+        padding: 0.5em;
+
+        > #receipt-deposited {
+          color: var(--signature-green);
+          font-size: 1.35em;
+
+          > #receipt-deposited-amount {
+            background-clip: text;
+            background-image: var(--gradient-0);
+            color: transparent;
+            font-size: 0.9em;
+          }
+        }
+
+        > #receipt-bankAccount {
+          color: var(--signature-blue);
+          font-size: 0.8em;
+        }
+
+        > #receipt-status {
+          color: var(--signature-green);
+          font-size: 0.8em;
+        }
+
+        > #receipt-transactionDate {
+          color: var(--signature-green);
+          font-size: 0.8em;
+        }
+
+        > #receipt-transferFee-container, > #receipt-referenceId-container {
+          color: var(--signature-blue);
+          display: flex;
+          flex-direction: row;
+          font-size: 0.9em;
+          justify-content: space-between;
+        }
+
+        > #receipt-transferFee-container {
+          margin-top: 0.75rem;
+
+          > #receipt-transferFee {
+            color: var(--gradient-0-green);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+footer {
+  bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  
+  > .pagination {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &.active {
+      display: flex;
+    }
+
+    .paginationButton {
+      aspect-ratio: 3 / 1;
+      border-radius: 13px;
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 0.5rem 0.75rem;
+      width: 150px;
+
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &.back {
+        background-color: var(--primary);
+        border: none;
+        color: var(--signature-blue);
+
+        &#depositTransaction-pagination-back {
+          background-image: var(--gradient-0);
+          color: white;
+        }
+      }
+
+      &.next {
+        background-image: var(--gradient-0);
+        border: none;
+        color: white;
+      }
     }
   }
 }

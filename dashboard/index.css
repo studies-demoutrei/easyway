@@ -165,14 +165,14 @@ main {
 
         > .transaction-name {
           color: var(--signature-blue);
-          font-size: 1.18em;
+          font-size: 0.9em;
           font-weight: 500;
         }
 
         > .transaction-total {
           align-self: end;
           color: var(--signature-green);
-          font-size: 1.09em;
+          font-size: 0.9em;
         }
       }
     }

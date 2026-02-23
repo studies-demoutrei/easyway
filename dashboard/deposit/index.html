@@ -26,7 +26,7 @@
       </section>
     </header>
     <main>
-      <section id="fundSource-section">
+      <section id="fundSource-section" class="show">
         <span class="section-heading">Select Fund Source</span>
         <span class="section-subtext">My accounts</span>
         <div id="fundSource-eWallet-container">
@@ -36,9 +36,45 @@
         <span class="section-subtext">Other banks</span>
         <select id="fundSource-externalBank-select" name="externalBank">
           <option value="" disabled selected hidden>Select a bank</option>
+          <option value="GCash" class="fundSource-externalBank-option">GCash</option>
         </select>
       </section>
+      <section id="depositAmount-section">
+        <span class="section-heading">Deposit to my Account</span>
+        <span id="depositAmount-warning-requiredField" class="depositAmount-warning">This field is required</span>
+        <input required id="depositAmount-input" type="number" inputmode="numeric" pattern="\d+">
+        <span class="section-subtext">You have &#8369; <span id="depositAmount-externalBankBalance"></span> in your <span id="depositAmount-externalBank"></span></span>
+      </section>
+      <section id="depositTransaction-section">
+        <span class="section-heading">Successful Deposit</span>
+        <div id="receipt-container">
+          <span id="receipt-deposited">&#8369; <span id="receipt-deposited-amount"></span></span>
+          <span id="receipt-bankAccount">Savings account</span>
+          <span id="receipt-status">Completed</span>
+          <span id="receipt-transactionDate">02-27-26 6:28 pm</span>
+          <div id="receipt-transferFee-container">
+            <span>Transfer Fee</span>
+            <span id="receipt-transferFee">00.00</span>
+          </div>
+          <div id="receipt-referenceId-container">
+            <span>Reference ID</span>
+            <span id="receipt-referenceID">1234 5678 ABCD</span>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div id="fundSource-pagination" class="pagination active">
+        <button id="fundSource-pagination-back" class="paginationButton back">Back</button>
+      </div>
+      <div id="depositAmount-pagination" class="pagination">
+        <button id="depositAmount-pagination-continue" class="paginationButton next">Continue</button>
+        <button id="depositAmount-pagination-back" class="paginationButton back">Back</button>
+      </div>
+      <div id="depositTransaction-pagination" class="pagination">
+        <button id="depositTransaction-pagination-back" class="paginationButton back">Back</button>
+      </div>
+    </footer>
     <script type="module" src="index.js"></script>
     <script type="module">
       import { setupHook } from './index.js';
