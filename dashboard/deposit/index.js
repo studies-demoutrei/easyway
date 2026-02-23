@@ -101,4 +101,13 @@ export function setupHook() {
   userFirstNameElement.textContent = userData["name"]["firstName"];
   userBalanceElement.textContent = userData["balance"].toLocaleString();
   userLastUpdatedElement.textContent = userData["lastUpdated"];
+  
+  for (const item in userData["externalBanks"]) {
+    if (item == "eWallet") continue;
+    const fundSourceExternalBankOption = document.createElement("option");
+    fundSourceExternalBankOption.classList.add("fundSource-externalBnk-option");
+    fundSourceExternalBankOption.value = item;
+    fundSourceExternalBankOption.textContent = item;
+    fundSourceExternalBankSelect.appendChild(fundSourceExternalBankOption);
+  }
 }

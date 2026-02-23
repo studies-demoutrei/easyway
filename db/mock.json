@@ -7,7 +7,10 @@
   },
   "externalBanks": {
     "eWallet": 500.00,
-    "GCash": 1420.59
+    "GCash": 1420.59,
+    "Maya Wallet": 2092,
+    "BDO Unibank": 9614,
+    "UnionBank": 1911
   },
   "lastUpdated": "02-16-26",
   "name": {
