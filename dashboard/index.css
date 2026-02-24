@@ -33,7 +33,7 @@ header {
   padding-top: 1.25rem;
 
   > #blueBlob {
-    background-image: linear-gradient(to top, #0a398e, 45%, #98b6ff);
+    background-image: linear-gradient(to top, #38B6FF, 20%, #0A3C8D);
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     height: 200px;

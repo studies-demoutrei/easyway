@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>EasyWay</title>
+  </head>
+  <body>
+    <div id="blocker"><span>This app is only available on mobile.</span></div>
+    <header>
+      <div id="blueBlob"></div>
+      <div id="container-greeting">
+        <span id="container-greeting-text">
+          Welcome back, <span id="user-firstName"></span>
+        </span>
+        <img id="icon" src="../../assets/icon.png"/>
+      </div>
+      <section id="container-balance">
+        <div id="container-balance-title">Current Balance</div>
+        <div id="container-balance-bal">&#8369;<span id="user-balance"></span></div>
+        <div id="container-balance-lastUpdated">Last updated on <span id="user-lastUpdated"></span></div>
+      </section>
+    </header>
+    <main>
+      <section id="destinationOptions-section" class="show">
+        <span class="section-title">Transfer money</span>
+        <div id="destinationOptions-options-container">
+          <div id="destinationOptions-internal" class="destinationOptions-option">
+            <img class="destinationOptions-option-icon" src="../../assets/banner.png">
+            <div class="destinationOptions-option-name-container">
+              <span class="destinationOptions-option-name">Within Easyway</span>
+              <span class="destinationOptions-option-subtext">To another Easway account</span>
+            </div>
+          </div>
+          <div id="destinationOptions-external" class="destinationOptions-option">
+            <img class="destinationOptions-option-icon">
+            <div class="destinationOptions-option-name-container">
+              <span class="destinationOptions-option-name">To another bank or eWallet</span>
+              <span class="destinationOptions-option-subtext">GCash, Maya, BDO, UB, or others</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="accountSelect-section">
+        <span class="section-title">Transfer money</span>
+        <span id="accountSelect-subtext-sourceAccount" class="section-subtext">Source account</span>
+        <div id="accountSelect-sourceAccount-container" class="accountSelect-input">
+          <div class="accountSelect-input-placeholder">Select...</div>
+          <div class="accountSelect-input-option">Savings account</div>
+        </div>
+        <span id="accountSelect-subtext-destinationAccount" class="section-subtext">Destination account</span>
+        <div id="accountSelect-destinationAccount-container" class="accountSelect-input">
+          <div class="accountSelect-input-placeholder">Select...</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="destinationOptions-pagination-container" class="pagination active">
+        <button id="destinationOptions-pagination-back" class="pagination-button back">Back</button>
+      </div>
+      <div id="accountSelect-pagination-container" class="pagination">
+        <button id="accountSelect-pagination-continue" class="pagination-button next">Continue</button>
+        <button id="accountSelect-pagination-back" class="pagination-button back">Back</button>
+      </div>
+    </footer>
+    <script type="module" src="index.js"></script>
+    <script type="module">
+      import { setupHook } from './index.js';
+
+      setupHook();
+    </script>
+  </body>
+</html>

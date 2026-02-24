@@ -78,6 +78,7 @@ depositAmountPaginationContinueButton.addEventListener("click", (_) => {
   depositTransactionPagination.classList.add("active");
   receiptDepositedAmountText.textContent = Number(depositAmountInput.value).toLocaleString();
   userBalanceElement.textContent = (userData["balance"] + Number(depositAmountInput.value)).toLocaleString();
+  userLastUpdatedElement.textContent = "02-27-26";
 })
 
 
@@ -105,7 +106,7 @@ export function setupHook() {
   for (const item in userData["externalBanks"]) {
     if (item == "eWallet") continue;
     const fundSourceExternalBankOption = document.createElement("option");
-    fundSourceExternalBankOption.classList.add("fundSource-externalBnk-option");
+    fundSourceExternalBankOption.classList.add("fundSource-externalBank-option");
     fundSourceExternalBankOption.value = item;
     fundSourceExternalBankOption.textContent = item;
     fundSourceExternalBankSelect.appendChild(fundSourceExternalBankOption);
