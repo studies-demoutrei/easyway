@@ -224,6 +224,95 @@ main {
         }
       }
     }
+
+    &#transferAmount-section {
+      
+      > .transferAmount-input {
+        border: 2px solid var(--signature-green);
+        border-radius: 13px;
+        font-size: 1em;
+        padding: 0.5em 0.75em;
+
+        &:focus {
+          outline: none;
+        }
+
+        &#transferAmount-accountNumber-input {
+          margin-top: 0.75rem;
+        }
+
+        &#transferAmount-amount-input {
+          margin-top: 0.5rem;
+        }
+
+        &#transferAmount-note-input {
+          font-family: "Rubik";
+          margin-top: 0.75rem;
+          resize: vertical;
+        }
+      }
+
+      > .section-subtext {
+        margin-left: 1em;
+      }
+    }
+
+    &#receipt-section {
+      > #receipt-container {
+        background-color: white;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        margin-top: 1rem;
+        padding: 0.75rem 1rem;
+
+        > #receipt-payment {
+          color: var(--signature-green);
+          font-size: 1.2em;
+          
+          > #receipt-payment-amount {
+            background-clip: text;
+            background-image: var(--gradient-0);
+            color: transparent;
+          }
+        }
+
+        > #receipt-bankAccount {
+          color: var(--signature-blue);
+          font-size: 0.9em;
+        }
+
+        > #receipt-status {
+          color: var(--signature-green);
+          font-size: 0.9em;
+        }
+
+        > #receipt-timestamp {
+          color: var(--signature-green);
+          font-size: 0.9em;
+        }
+
+        > div {
+          display: flex;
+          flex-direction: row;
+          font-size: 0.9em;
+          justify-content: space-between;
+
+          &#receipt-transferFee-container {
+            margin-top: 0.5rem;
+          }
+          
+          > span {
+            color: var(--signature-blue);
+
+            &#receipt-transferFee-amount {
+              color: var(--signature-green);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

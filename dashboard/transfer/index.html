@@ -57,6 +57,30 @@
           <div class="accountSelect-input-placeholder">Select...</div>
         </div>
       </section>
+      <section id="transferAmount-section">
+        <span class="section-title">Transfer money</span>
+        <input required id="transferAmount-accountNumber-input" type="number" inputmode="numeric" pattern="\d+" class="transferAmount-input" placeholder="Account number">
+        <input required id="transferAmount-amount-input" type="number" inputmode="numeric" pattern="\d+" class="transferAmount-input" placeholder="Amount">
+        <span class="section-subtext">You have &#8369; <span id="transferAmount-savingsBalance"></span> in your savings account</span>
+        <textarea id="transferAmount-note-input" class="transferAmount-input" type="text" placeholder="Note (optional)"></textarea>
+      </section>
+      <section id="receipt-section">
+        <span class="section-title">Transferred Successfully</span>
+        <div id="receipt-container">
+          <span id="receipt-payment">&#8369; <span id="receipt-payment-amount"></span></span>
+          <span id="receipt-bankAccount"></span>
+          <span id="receipt-status">Completed</span>
+          <span id="receipt-timestamp">02-27-26 6:59 pm</span>
+          <div id="receipt-transferFee-container">
+            <span>Transfer fee</span>
+            <span id="receipt-transferFee-amount">10.00</span>
+          </div>
+          <div id="receipt-referenceId-container">
+            <span>Reference ID</span>
+            <span id="receipt-referenceId-hash">ABCD EF12 3456</span>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div id="destinationOptions-pagination-container" class="pagination active">
@@ -65,6 +89,13 @@
       <div id="accountSelect-pagination-container" class="pagination">
         <button id="accountSelect-pagination-continue" class="pagination-button next">Continue</button>
         <button id="accountSelect-pagination-back" class="pagination-button back">Back</button>
+      </div>
+      <div id="transferAmount-pagination-container" class="pagination">
+        <button id="transferAmount-pagination-confirm" class="pagination-button next">Confirm</button>
+        <button id="transferAmount-pagination-back" class="pagination-button back">Back</button>
+      </div>
+      <div id="receipt-pagination" class="pagination">
+        <button id="receipt-pagination-back" class="pagination-button next">Back</button>
       </div>
     </footer>
     <script type="module" src="index.js"></script>
