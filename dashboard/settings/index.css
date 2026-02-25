@@ -12,7 +12,6 @@
 
 body {
   background-color: var(--primary);
-  box-sizing: border-box;
   font-family: "Rubik";
   margin: 0;
   overflow-x: clip;
@@ -118,7 +117,7 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
 
   > section {
     display: flex;
@@ -129,35 +128,24 @@ main {
 
     > .heading {
       color: var(--signature-green);
-      font-size: 1.10em;
+      font-size: 1.1em;
       font-weight: bold;
     }
-    
-    > .action {
+
+    > button {
       background-color: white;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      padding: 0.5em 1em;
+      border: none;
+      border-radius: 13px;
+      color: var(--signature-blue);
+      padding: 0.75em 1.5em;
+      text-align: left;
 
       &:hover {
         cursor: pointer;
       }
 
-      > .action-name {
-        color: var(--signature-blue);
-        font-size: 0.85em;
-      }
-
-      > .action-subtext {
-        color: var(--subtext-0);
-        font-size: 0.68em;
-      }
-
-      &#account-logout-container {
-        > .action-name {
-          color: red;
-        }
+      &#logout {
+        color: red;
       }
     }
   }
@@ -165,19 +153,22 @@ main {
 
 
 footer {
-  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 1rem;
-  position: relative;
-  width: 100vw;
-
+  width: 100%;
+  
   > .pagination {
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 80%;
 
     > .pagination-button {
       aspect-ratio: 4 / 1;
       border: none;
+      border-radius: 13px;
       font-family: "Rubik";
       font-size: 1.15em;
       width: 45%;
@@ -186,12 +177,9 @@ footer {
         cursor: pointer;
       }
 
-      &.next {
+      &#pagination-home {
         background-image: var(--gradient-0);
-        border-radius: 15px;
         color: white;
-        font-family: "Rubik";
-        font-weight: bold;
       }
     }
   }

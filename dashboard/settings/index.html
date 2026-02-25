@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>EasyWay</title>
+  </head>
+  <body>
+    <div id="blocker"><span>This app is only available on mobile.</span></div>
+    <header>
+      <div id="blueBlob"></div>
+      <div id="container-greeting">
+        <span id="container-greeting-text">
+          Welcome back, <span id="user-firstName"></span>
+        </span>
+        <img id="icon" src="../../assets/icon.png"/>
+      </div>
+      <section id="container-balance">
+        <div id="container-balance-title">Current Balance</div>
+        <div id="container-balance-bal">&#8369;<span id="user-balance"></span></div>
+        <div id="container-balance-lastUpdated">Last updated on <span id="user-lastUpdated"></span></div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <span class="heading">Account Management</span>
+        <button>Profile</button>
+        <button>Update proof of billing/ID</button>
+        <button>Digital signature specimen</button>
+        <button>Upgrade account</button>
+      </section>
+      <section>
+        <span class="heading">Security</span>
+        <button>Change password</button>
+        <button>Enable biometric login</button>
+        <button>Two-factor authentication</button>
+        <button>Device management</button>
+        <button>Transaction limits</button>
+      </section>
+      <section>
+        <span class="heading">Notifications</span>
+        <button>Push notifications</button>
+        <button>SMS/e-mail alerts</button>
+        <button>Custom alerts</button>
+      </section>
+      <section>
+        <span class="heading">Preferences</span>
+        <button>Language</button>
+        <button>Theme</button>
+        <button>Quiz action customization</button>
+      </section>
+      <section>
+        <span class="heading">Support</span>
+        <button>Customer service hotline</button>
+        <button>Chat support</button>
+        <button>FAQs and guides</button>
+      </section>
+      <section>
+        <span class="heading">Legal and Compliance</span>
+        <button id="termsAndConditions">Terms and Conditions</button>
+        <button>Privacy Policy</button>
+        <button>Regulatory disclosures</button>
+      </section>
+      <section>
+        <span class="heading">Logout and App Info</span>
+        <button id="logout">Logout</button>
+        <button>App version</button>
+        <button>Check for updates</button>
+      </section>
+    </main>
+    <footer>
+      <div class="pagination">
+        <button id="pagination-home" class="pagination-button next">Home</button>
+      </div>
+    </footer>
+    <script type="module" src="index.js"></script>
+    <script type="module">
+      import { setupHook } from './index.js';
+
+      setupHook();
+    </script>
+  </body>
+</html>
