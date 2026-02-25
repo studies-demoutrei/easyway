@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>EasyWay</title>
+  </head>
+  <body>
+    <div id="blocker"><span>This app is only available on mobile.</span></div>
+    <header>
+      <div id="blueBlob"></div>
+      <div id="container-greeting">
+        <span id="container-greeting-text">
+          Welcome back, <span id="user-firstName"></span>
+        </span>
+        <img id="icon" src="../../assets/icon.png"/>
+      </div>
+      <section id="container-balance">
+        <div id="container-balance-title">Current Balance</div>
+        <div id="container-balance-bal">&#8369;<span id="user-balance"></span></div>
+        <div id="container-balance-lastUpdated">Last updated on <span id="user-lastUpdated"></span></div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <span class="heading">Do more with EasyWay!</span>
+        <div class="action">
+          <span class="action-name">Pay Bills</span>
+          <span class="action-subtext">Utilities, credit cards, and more</span>
+        </div>
+        <div class="action">
+          <span class="action-name">Load eWallet</span>
+          <span class="action-subtext">VYBE, Easytrip, AutoSweep, RFID, and more</span>
+        </div>
+        <div class="action">
+          <span class="action-name">Load prepaid phone</span>
+          <span class="action-subtext">Globe, Smart, DITO, and other networks</span>
+        </div>
+        <div class="action">
+          <span class="action-name">Load other services</span>
+          <span class="action-subtext">Cignal Prepaid and Meralco Kuryente Load</span>
+        </div>
+      </section>
+      <section>
+        <span class="heading">Services</span>
+        <div class="action">
+          <span class="action-name">Open savings account</span>
+        </div>
+        <div class="action">
+          <span class="action-name">Open an investment account</span>
+        </div>
+        <div class="action">
+          <span class="action-name">Apply for health and life insurance</span>
+        </div>
+      </section>
+      <section>
+        <span class="heading">Account</span>
+        <div id="account-settings-container" class="action">
+          <span class="action-name">Settings</span>
+        </div>
+        <div id="account-logout-container" class="action">
+          <span class="action-name">Logout</span>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="pagination">
+        <button id="pagination-home" class="pagination-button next">Home</button>
+      </div>
+    </footer>
+    <script type="module" src="index.js"></script>
+    <script type="module">
+      import { setupHook } from './index.js';
+
+      setupHook();
+    </script>
+  </body>
+</html>

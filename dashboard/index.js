@@ -18,7 +18,7 @@ transferActionButton.addEventListener("click", (_) => {
 })
 
 viewAllActionButton.addEventListener("click", (_) => {
-  window.open('./actions', "_self");
+  window.open('./more', "_self");
 })
 
 

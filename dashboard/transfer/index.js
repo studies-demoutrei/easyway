@@ -170,7 +170,4 @@ export function setupHook() {
   userBalanceElement.textContent = userData["balance"].toLocaleString();
   userLastUpdatedElement.textContent = userData["lastUpdated"];
   transferAmountSavingsBalanceText.textContent = userData.balance.toLocaleString();
-
-  // destinationOptionsSectionClose();
-  // receiptSectionOpen();
 }
