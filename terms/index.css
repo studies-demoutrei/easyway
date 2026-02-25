@@ -81,78 +81,34 @@ header {
 main {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  width: 100%;
 
-  > section {
-    background-color: white;
-    border-radius: 18px;
+  > .heading {
+    color: var(--signature-green);
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 85%;
+  }
+  
+  > .term {
     display: flex;
     flex-direction: column;
-    overflow: clip;
-    width: 250px;
+    width: 85%;
 
-    &:first-child {
-      margin-top: 1rem;
+    > .term-name {
+      color: var(--signature-blue);
+      font-size: 0.9em;
+      font-weight: bold;
     }
 
-    &:last-child {
-      margin-bottom: 1rem;
-    }
-
-    > .coverImage {
-      aspect-ratio: 4 / 2 ;
-    }
-
-    > .content {
-      display: flex;
-      flex-direction: column;
+    > .term-content {
+      color: var(--signature-blue);
       font-size: 0.8em;
-      padding: 0.5rem 1rem;
-
-      > .title {
-        background-image: linear-gradient(135deg, #039A47, #00B9A9);
-        background-clip: text;
-        color: transparent;
-        font-size: 1.3em;
-        font-weight: bold;
-      }
-    }
-
-    &#section-humanMadeIngenuity {
-      > .content {
-        gap: 0.5em;
-        text-align: center;
-
-        > #enumeration {
-          align-self: center;
-          display: flex;
-          flex-direction: row;
-          gap: 0.5em;
-
-          > .enumeration-item {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            
-            > .enumeration-count {
-              aspect-ratio: 1 / 1;
-              border-radius: 50%;
-              color: var(--signature-blue);
-              font-size: 1.1em;
-              font-weight: bold;
-              padding: 0.25em;
-              width: 1em;
-            }
-
-            > .enumeration-content {
-              font-size: 0.9em;
-            }
-          }
-        }
-      }
+      margin-left: 1em;
+      width: calc(100% - 1em);
     }
   }
 }
