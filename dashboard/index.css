@@ -128,6 +128,20 @@ main {
         &:hover {
           cursor: pointer;
         }
+
+        &#action-transfer-icon, &#action-deposit-icon {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 63%, 100%;
+        }
+        
+        &#action-transfer-icon {
+          background-image: url('../assets/transfer.png'), var(--gradient-0);
+        }
+
+        &#action-deposit-icon {
+          background-image: url('../assets/deposit.png'), var(--gradient-0);
+        }
       }
 
       > .action-name {
