@@ -14,7 +14,7 @@ body {
   background-color: var(--primary);
   box-sizing: border-box;
   font-family: "Rubik";
-  height: 100vh;
+  height: min(100vh);
   margin: 0;
   overflow: clip;
   padding: 0;
@@ -270,7 +270,7 @@ main {
 
 
 footer {
-  bottom: 10px;
+  bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
