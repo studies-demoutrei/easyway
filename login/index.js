@@ -4,9 +4,15 @@ const passwordElement = document.querySelector("#form-signIn-password");
 const signInButtonElement = document.querySelector("#form-signIn-button");
 const userData = await (await fetch('../db/mock.json')).json();
 
+const homeButton = document.querySelector("#home");
+
 window.signIn = signIn;
 window.warnInvalidEmail = warnInvalidEmail;
 window.warnIncorrectCredentials = warnIncorrectCredentials;
+
+homeButton.addEventListener("click", (_) => {
+  window.open('../', "_self");
+})
 
 
 function signIn() {

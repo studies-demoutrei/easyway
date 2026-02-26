@@ -32,6 +32,8 @@ const depositTransactionPaginationBackButton = document.querySelector("#depositT
 
 const receiptDepositedAmountText = document.querySelector("#receipt-deposited-amount");
 
+const iconImage = document.querySelector("#icon");
+
 
 eWalletBalanceAmountText.textContent = userData["externalBanks"]["eWallet"].toLocaleString();
 
@@ -61,7 +63,10 @@ fundSourceExternalBankSelect.addEventListener("change", (_) => {
 
 
 depositAmountPaginationBackButton.addEventListener("click", (_) => {
-  window.open('../', "_self");
+  depositAmountPagination.classList.remove("active");
+  depositAmountSection.classList.remove("show");
+  fundSourceSection.classList.add("show");
+  fundSourcePagination.classList.add("active");
 })
 
 depositAmountPaginationContinueButton.addEventListener("click", (_) => {
@@ -94,6 +99,11 @@ depositAmountInput.addEventListener("input", (_) => {
 
 
 depositTransactionPaginationBackButton.addEventListener("click", (_) => {
+  window.open('../', "_self");
+})
+
+
+iconImage.addEventListener("click", (_) => {
   window.open('../', "_self");
 })
 

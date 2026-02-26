@@ -54,11 +54,13 @@ const stepThreePaginationContainer = document.querySelector("#stepThree-paginati
 const stepThreePaginationBackButton = document.querySelector("#stepThree-pagination-back");
 const stepThreePaginationIAgreeButton = document.querySelector("#stepThree-pagination-iAgree");
 
+const homeButton = document.querySelector("#home");
+
 const fullLegalNameRegex = /^[\p{L}\s'-]+$/u;
 const emailAddressRegex = /^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/m;
 const mobileNumberRegex = /^[1-9]{1}[0-9]{7,14}$/;
 const usernameRegex = /^[a-zA-Z0-9_]{3,16}$/;
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})/;
+const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})/;
 
 
 fullLegalNameInput.addEventListener("input", (_) => {
@@ -239,6 +241,11 @@ stepTwoSelfieCaptureActionConfirmButton.addEventListener("click", (_) => {
   stepTwoSelfieCaptureSection.classList.remove("show");
   stepTwoMainSection.classList.add("show");
   stepTwoPaginationContainer.classList.add("active");
+})
+
+
+homeButton.addEventListener("click", (_) => {
+  window.open('../', "_self");
 })
 
 

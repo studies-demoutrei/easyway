@@ -41,6 +41,8 @@ const receiptPaymentAmountText = receiptSection.querySelector("#receipt-payment-
 const receiptBankAccountText = receiptSection.querySelector("#receipt-bankAccount");
 const receiptPaginationBackButton = receiptPagination.querySelector("#receipt-pagination-back");
 
+const iconImage = document.querySelector("#icon");
+
 
 destinationOptionsInternalOption.addEventListener("click", (_) => {
   destinationOptionsSectionClose();
@@ -117,6 +119,11 @@ transferAmountAmountInput.addEventListener("input", (_) => {
 
 
 receiptPaginationBackButton.addEventListener("click", (_) => {
+  window.open('../', "_self");
+})
+
+
+iconImage.addEventListener("click", (_) => {
   window.open('../', "_self");
 })
 

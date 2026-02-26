@@ -1,8 +1,11 @@
 :root {
+  --dark-primary: #11111b;
+  --dark-surface-0: #313244;
   --gradient-0-blue: #00B9A9;
   --gradient-0-green: #039a47;
   --gradient-0: linear-gradient(135deg, var(--gradient-0-green), var(--gradient-0-blue));
-  --primary: #f1f0eb;
+  --light-primary: #f1f0eb;
+  --light-surface-0: #fffefc;
   --signature-blue: #0a398e;
   --signature-green: #039a47;
   --subtext-0: #B4B4B4;
@@ -11,7 +14,6 @@
 
 
 body {
-  background-color: var(--primary);
   font-family: "Rubik";
   margin: 0;
   overflow-x: clip;
@@ -19,6 +21,42 @@ body {
   padding: 0;
   padding-bottom: 2rem;
   width: 100vw;
+
+  &[theme="light"] {
+    background-color: var(--light-primary);
+
+    > header > #container-balance {
+      background-color: var(--light-surface-0);
+      box-shadow: 0 10px lightgray;
+    }
+    
+    > main > section > button {
+      background-color: var(--light-surface-0);
+      color: var(--signature-blue);
+
+      &:hover {
+        color: var(--light-primary);
+      }
+    }
+  }
+
+  &[theme="dark"] {
+    background-color: var(--dark-primary);
+
+    > header > #container-balance {
+      background-color: var(--dark-surface-0);
+      box-shadow: 0 10px;
+    }
+
+    > main > section > button {
+      background-color: var(--dark-surface-0);
+      color: var(--gradient-0-blue);
+
+      &:hover {
+        color: var(--dark-primary);
+      }
+    }
+  }
 }
 
 
@@ -82,14 +120,16 @@ header {
       aspect-ratio: 1 / 1;
       height: max-content;
       width: 4rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
   > #container-balance {
     align-self: center;
-    background-color: white;
     border-radius: 20px;
-    box-shadow: 0 10px lightgray;
     font-family: "Rubik";
     padding: 0.75rem 1.5rem;
     width: 70%;
@@ -98,15 +138,16 @@ header {
       background-image: linear-gradient(135deg, #039a47, #00b9a9);
       background-clip: text;
       color: transparent;
+      font-weight: bold;
 
       &#container-balance-bal {
         font-size: 1.75em;
-        font-weight: bold;
-        margin: 0.7rem 0;
+        margin: 0.6rem 0;
       }
 
       &#container-balance-lastUpdated {
         font-size: 0.75em;
+        font-weight: normal;
       }
     }
   }
@@ -133,14 +174,14 @@ main {
     }
 
     > button {
-      background-color: white;
       border: none;
       border-radius: 13px;
-      color: var(--signature-blue);
       padding: 0.75em 1.5em;
       text-align: left;
+      transition: 0.3s linear;
 
       &:hover {
+        background-image: var(--gradient-0);
         cursor: pointer;
       }
 

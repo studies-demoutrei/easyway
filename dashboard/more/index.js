@@ -7,6 +7,8 @@ const accountSettingsButton = document.querySelector("#account-settings-containe
 const accountLogOutButton = document.querySelector("#account-logout-container");
 const paginationHomeButton = document.querySelector("#pagination-home");
 
+const iconImage = document.querySelector("#icon");
+
 
 accountSettingsButton.addEventListener("click", (_) => {
   window.open('../settings', "_self");
@@ -18,6 +20,11 @@ accountLogOutButton.addEventListener("click", (_) => {
 
 
 paginationHomeButton.addEventListener("click", (_) => {
+  window.open('../', "_self");
+})
+
+
+iconImage.addEventListener("click", (_) => {
   window.open('../', "_self");
 })
 

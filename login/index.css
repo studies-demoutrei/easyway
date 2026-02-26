@@ -29,6 +29,19 @@ body {
 }
 
 
+#home {
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 45px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
 #banner {
   width: 67%;
 }
