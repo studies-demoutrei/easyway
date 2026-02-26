@@ -175,10 +175,16 @@ main {
           &:focus {
             outline: none;
           }
+
+          &#stepOne-informationForm-dateOfBirth:hover {
+            background: none;
+            cursor: pointer;
+          }
         }
 
         > #stepOne-userForm-password-toggle {
           align-self: center;
+          background: none;
           border: none;
           font-size: 0.8em;
           position: absolute;

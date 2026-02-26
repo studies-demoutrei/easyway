@@ -164,6 +164,10 @@ footer {
         font-size: 0.85em;
         margin-left: 1rem;
         
+        &:hover {
+          cursor: pointer;
+        }
+        
         > a {
           color: inherit;
           text-decoration: none;
@@ -172,8 +176,13 @@ footer {
     }
   }
 
-  > #copyright {
+  > #copyright, > #credit-github {
     font-size: 0.7em;
+
+    > a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 }
 

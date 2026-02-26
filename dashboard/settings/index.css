@@ -36,6 +36,20 @@ body {
 
       &:hover {
         color: var(--light-primary);
+
+        &#logout {
+          color: var(--light-primary);
+        }
+      }
+
+      &#appVersion {
+        &:hover > #appVersion-v {
+          color: var(--light-primary);
+        }
+
+        > #appVersion-v {
+          color: var(--subtext-1);
+        }
       }
     }
   }
@@ -54,6 +68,20 @@ body {
 
       &:hover {
         color: var(--dark-primary);
+
+        &#logout {
+          color: var(--dark-primary);
+        }
+      }
+
+      &#appVersion {
+        &:hover > #appVersion-v {
+          color: var(--dark-primary);
+        }
+
+        > #appVersion-v {
+          color: var(--subtext-1);
+        }
       }
     }
   }
@@ -187,6 +215,16 @@ main {
 
       &#logout {
         color: red;
+      }
+
+      &#appVersion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        > #appVersion-v {
+          transition: 0.3s linear;
+        }
       }
     }
   }
